@@ -28,7 +28,7 @@ navbar-links:
 
 # Image to show in the navigation bar - works best with a square image
 # Remove this parameter if you don't want an image in the navbar
-avatar: "/assets/img/avatar-icon.png"
+# avatar: "/assets/img/avatar-icon.png"
 
 # By default, the image is cut into a circle. You can disable this behaviour by setting 'round-avatar: false'
 round-avatar: true
@@ -122,8 +122,13 @@ footer-link-col: "#404040"
 #mobile-theme-col: "#0085A1"
 
 # For any extra visual customization, you can include additional CSS files in every page on your site. List any custom CSS files here
-#site-css:
-#  - "/assets/css/custom-styles.css"
+site-css:
+  - "/assets/css/mystyles.css"
+  - "/assets/css/simple-line-icons.css"
+  - "/assets/css/bootstrap.css"
+  - "/assets/css/bootstrap.min.css"
+  - "/assets/css/font-awesome.min.css"
+  - "/assets/css/landing-page.min.css"
 
 # If you have common JavaScript files that should be included in every page, list them here
 #site-js:
