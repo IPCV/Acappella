@@ -123,10 +123,10 @@ footer-link-col: "#404040"
 
 # For any extra visual customization, you can include additional CSS files in every page on your site. List any custom CSS files here
 site-css:
-  - "/assets/css/mystyles.css"
-  - "/assets/css/simple-line-icons.css"
-  - "/assets/css/bootstrap.min.css"
-  - "/assets/css/font-awesome.min.css"
+  - "/assets/vendor/font-awesome/css/mystyles.css"
+  - "/assets/vendor/simple-line-iconscss/simple-line-icons.css"
+  - "/assets/vendor/bootstrap/css/bootstrap.min.css"
+  - "/assets/font-awesome/css/font-awesome.min.css"
   - "/assets/css/landing-page.min.css"
   - "https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic"
 
