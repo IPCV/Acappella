@@ -15,7 +15,7 @@ author: IPCV
 
 navbar-links:
   GitHub: "https://github.com/JuanFMontesinos/Acappella"
-  Demos: "demos"
+  Demos: "Demos"
   The Dataset:
     - Intro: "dataset"
     - Python Resources: "datasetpython"
