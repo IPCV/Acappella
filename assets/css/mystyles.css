@@ -55,13 +55,9 @@
 
 header.masthead {
   position: relative;
-  background-color: gainsboro!important;
     padding-bottom: 0px;
 }
 
-header.masthead .overlay {
-  background-color: gainsboro;
-}
 
 .testimonials {
   padding-top: 0px;
