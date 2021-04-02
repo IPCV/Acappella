@@ -5,5 +5,5 @@ subtitle: An audio-visual CNN for singing voice separation
 ---
 
 
-![Y-Net](/img/model.png "Y-Net Architecture")
+![Y-Net](../img/model.png "Y-Net Architecture")
 
