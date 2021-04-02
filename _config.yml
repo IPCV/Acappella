@@ -16,8 +16,8 @@ author: IPCV
 navbar-links:
   GitHub: "https://github.com/JuanFMontesinos/Acappella"
   Demos: "demos"
-  Y-Net:
-    - The architecture: "architecture"
+  Y-Net Architecture:
+    - The model: "architecture"
     - Pytorch weights: "weights"
   The Dataset:
     - Intro: "dataset"
