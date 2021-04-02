@@ -16,6 +16,9 @@ author: IPCV
 navbar-links:
   GitHub: "https://github.com/JuanFMontesinos/Acappella"
   Demos: "demos"
+  Y-Net:
+    - The architecture: "architecture"
+    - Pytorch weights: "weights"
   The Dataset:
     - Intro: "dataset"
     - Python Resources: "datasetpython"
@@ -23,7 +26,7 @@ navbar-links:
     - Juan Montesinos: "https://juanmontesinos.com"
     - Venkatesh Kadandale: "https://www.upf.edu/web/ipcv/entry/-/-/153364/adscripcion/venkatesh-shenoy-kadandale"
     - Gloria Haro: "https://www.upf.edu/web/gloria-haro"
-
+  
 # --- Logo --- #
 
 # Image to show in the navigation bar - works best with a square image
