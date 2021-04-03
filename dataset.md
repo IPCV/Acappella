@@ -10,7 +10,7 @@ Each recording has been manually selected to exclude parts of the videos that do
 The dataset comprises of 1693 different videos split across four languages: English, Spanish, Hindi and Others.  The statistics can be shown in the figures below.  
 ![Statistics](../img/violinplot.png)
 
-![Statistics](../img/barplot.png.png)
+![Statistics](../img/barplot.png)
 
 
 We also selected some demo videos and created a montage with ground-truth samples in order to evaluate the algorithm.  
