@@ -21,7 +21,7 @@ navbar-links:
     - Pytorch weights: "weights"
   The Dataset:
     - Intro: "dataset"
-    - Python Resources: "datasetpython"
+    - Download: "datasetpython"
   About us: 
     - Juan Montesinos: "https://juanmontesinos.com"
     - Venkatesh Kadandale: "https://www.upf.edu/web/ipcv/entry/-/-/153364/adscripcion/venkatesh-shenoy-kadandale"
