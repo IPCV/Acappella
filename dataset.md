@@ -18,4 +18,6 @@ The dataset comprises of 1693 different videos split across four languages: Engl
 
 We also selected some demo videos and created a montage with ground-truth samples in order to evaluate the algorithm.  
 In-depth details will be provided subject to paper acceptance.  
-##
+
+
+
