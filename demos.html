@@ -11,9 +11,31 @@ Dear reader, YouTube videos will start in the segment of interest. The recommend
     
 </p>
 
-  <h3>Queen Medley</h3>
-        <iframe width="614" height="345" src="https://www.youtube.com/embed/sEnTMgzw8ow?start=131" title="Queen Medley"
-                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></br>
+  <h3 style="display: inline-block">Queen Medley</h3>
+<div class="videoplay">
+    <button type="button" class="btn btn-outline-primary">Play</button>
+</div>
+<div class="videostop">
+    <button type="button" class="btn btn-outline-primary">Stop</button>
+</div>
+<script>
+    $('.videoplay').on('click', function () {
+        $("#qm")[0].src += "&autoplay=1";
+    });
+    $('.videostop').on('click', function () {
+        var videoURL = $('#qm').prop('src');
+        videoURL = videoURL.replace("&autoplay=1", "");
+        $('#qm').prop('src','');
+        $('#qm').prop('src',videoURL);
+    });
+</script>
+<iframe id="qm" class="qm_video"
+        width="614" height="345"
+        src="https://www.youtube.com/embed/sEnTMgzw8ow?start=131&end=143&showinfo=0&controls=0&enablejsapi=1"
+        title="Queen Medley" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+</br>
   <p class="lead mb-0" align="justify">
 
          
