@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="http://www.youtube.com/player_api"></script>
+</head>
+
+<body>
+MORE DEMOS AND DEMOS FOR AUDIO ONLY AND LLCP WILL BE ADDED IN THE FOLLOWING DAYS
+
+<p class="lead mb-0" align="justify">
+    Dear reader, YouTube videos will start in the segment of interest. The recommended way of visualizing the demos is
+    to pay attention to the singer/s lips and then to hear
+    the estimated samples.
+    </br>
+
+</p>
+<h3 style="display: inline-block">Queen Medley</h3>
+<div class="videoplay">
+    <button type="button" class="btn btn-outline-primary">Play</button>
+</div>
+<div class="videostop">
+    <button type="button" class="btn btn-outline-primary">Stop</button>
+</div>
+<script>
+    $('.videoplay').on('click', function () {
+        $("#qm")[0].src += "&autoplay=1";
+    });
+    $('.videostop').on('click', function () {
+        var videoURL = $('#qm').prop('src');
+        videoURL = videoURL.replace("&autoplay=1", "");
+        $('#qm').prop('src','');
+        $('#qm').prop('src',videoURL);
+    });
+</script>
+<iframe id="qm" class="qm_video"
+        width="614" height="345"
+        src="https://www.youtube.com/embed/sEnTMgzw8ow?start=131&end=143&showinfo=0&controls=0&enablejsapi=1"
+        title="Queen Medley" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+</br>
+<p class="lead mb-0" align="justify">
+
+    Queen Medley is a good example of how Y-Net pays attention to the motion lips. When lips are closed, system returns
+    a silent signal even if it hasn't
+    been trained to do so. On contrary, look into listen at the cocktail party returns a non-silent signal.  </br>
+
+</p>
+Mixture</br>
+<audio
+        controls
+        src="../estimated_demo/sEnTMgzw8ow_2_11_to_2_33/mix_sEnTMgzw8ow_2_11_to_2_33.wav">
+    Your browser does not support the
+    <code>audio</code> element.
+</audio>
+</br>
+Y-Net-r prediction</br>
+<img src="../estimated_demo/sEnTMgzw8ow_2_11_to_2_33/y-net-r_sEnTMgzw8ow_2_11_to_2_33_lead-vocals.PNG"
+     alt="Italian Trulli"></br>
+<audio
+        controls
+        src="../estimated_demo/sEnTMgzw8ow_2_11_to_2_33/y-net-r_sEnTMgzw8ow_2_11_to_2_33_lead-vocals.wav">
+    Your browser does not support the
+    <code>audio</code> element.
+</audio>
+</br>
+Y-Net-m prediction</br>
+<img src="../estimated_demo/sEnTMgzw8ow_2_11_to_2_33/y-net-m_sEnTMgzw8ow_2_11_to_2_33_lead-vocals.PNG"
+     alt="Italian Trulli"></br>
+<audio
+        controls
+        src="../estimated_demo/sEnTMgzw8ow_2_11_to_2_33/y-net-m_sEnTMgzw8ow_2_11_to_2_33_lead-vocals.wav">
+    Your browser does not support the
+    <code>audio</code> element.
+</audio>
+</br>
+<p></p>
+
+
+<h3>Disney Medley</h3>
+<iframe width="614" height="345" src="https://www.youtube.com/embed/Dyo7jzaCUhk?start=38" title="Disney Medley"
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+</br>
+<p class="lead mb-0" align="justify">
+
+
+</p>
+Mixture</br>
+<audio
+        controls
+        src="../estimated_demo/sEnTMgzw8ow_2_11_to_2_33/mix_Dyo7jzaCUhk_0_02_to_5_2.wav">
+    Your browser does not support the
+    <code>audio</code> element.
+</audio>
+</br>
+Y-Net-r prediction</br>
+<img src="../estimated_demo/Dyo7jzaCUhk_0_02_to_5_2/y-net-r_Dyo7jzaCUhk_0_02_to_5_2_2-2.PNG" alt="Italian Trulli"></br>
+<audio
+        controls
+        src="../estimated_demo/Dyo7jzaCUhk_0_02_to_5_2/y-net-r_Dyo7jzaCUhk_0_02_to_5_2_2-2.wav">
+    Your browser does not support the
+    <code>audio</code> element.
+</audio>
+</br>
+Y-Net-m prediction</br>
+<img src="../estimated_demo/Dyo7jzaCUhk_0_02_to_5_2/y-net-m_Dyo7jzaCUhk_0_02_to_5_2_2-2.PNG" alt="Italian Trulli"></br>
+<audio
+        controls
+        src="../estimated_demo/Dyo7jzaCUhk_0_02_to_5_2/y-net-m_Dyo7jzaCUhk_0_02_to_5_2_2-2.wav">
+    Your browser does not support the
+    <code>audio</code> element.
+</audio>
+</br>
+<p></p>
+
+
+<h3>Isn't She Lovely - Jacob Collier</h3>
+<iframe width="640" height="480" src="https://www.youtube.com/embed/cttFanV0o7c?start=39"
+        title="Isn't She Lovely - Jacob Collier"
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+</br>
+<p class="lead mb-0" align="justify">
+
+
+    This song shows that our Y-Net can also separate accompaniment voices. Look into listen fails in its prediction
+    since
+    all the voices are performed by the same singer. In our case we return the voice for two different frames, the lead
+    voice (top right) and one of the accompaniment
+    voices.</br>
+
+</p>
+TOP RIGHT VOICE:</br>
+Mixture</br>
+<audio
+        controls
+        src="../estimated_demo/cttFanV0o7c_0_07_to_2_44/mix_cttFanV0o7c_0_07_to_2_44.wav">
+    Your browser does not support the
+    <code>audio</code> element.
+</audio>
+</br>
+
+Y-Net-r prediction</br>
+<img src="../estimated_demo/cttFanV0o7c_0_07_to_2_44/y-net-r_cttFanV0o7c_0_07_to_2_44_top-right.PNG"
+     alt="Italian Trulli"></br>
+<audio
+        controls
+        src="../estimated_demo/cttFanV0o7c_0_07_to_2_44/y-net-r_cttFanV0o7c_0_07_to_2_44_top-right.wav">
+    Your browser does not support the
+    <code>audio</code> element.
+</audio>
+</br>
+Y-Net-m prediction</br>
+<img src="../estimated_demo/cttFanV0o7c_0_07_to_2_44/y-net-m_cttFanV0o7c_0_07_to_2_44_top-right.PNG"
+     alt="Italian Trulli"></br>
+<audio
+        controls
+        src="../estimated_demo/cttFanV0o7c_0_07_to_2_44/y-net-m_cttFanV0o7c_0_07_to_2_44_top-right.wav">
+    Your browser does not support the
+    <code>audio</code> element.
+</audio>
+</br>
+BOTTOM LEFT VOICE:</br>
+Mixture</br>
+<audio
+        controls
+        src="../estimated_demo/cttFanV0o7c_0_07_to_2_44/mix_cttFanV0o7c_0_07_to_2_44_shortdemo.wav">
+    Your browser does not support the
+    <code>audio</code> element.
+</audio>
+</br>
+Y-Net-r prediction</br>
+<img src="../estimated_demo/cttFanV0o7c_0_07_to_2_44/y-net-r_cttFanV0o7c_0_07_to_2_44_bottom_left.PNG"
+     alt="Italian Trulli"></br>
+<audio
+        controls
+        src="../estimated_demo/cttFanV0o7c_0_07_to_2_44/y-net-r_cttFanV0o7c_0_07_to_2_44_bottom_left.wav">
+    Your browser does not support the
+    <code>audio</code> element.
+</audio>
+</br>
+Y-Net-m prediction</br>
+<img src="../estimated_demo/cttFanV0o7c_0_07_to_2_44/y-net-m_cttFanV0o7c_0_07_to_2_44_bottom_left.PNG"
+     alt="Italian Trulli"></br>
+<audio
+        controls
+        src="../estimated_demo/cttFanV0o7c_0_07_to_2_44/y-net-m_cttFanV0o7c_0_07_to_2_44_bottom_left.wav">
+    Your browser does not support the
+    <code>audio</code> element.
+</audio>
+</br>
+<p></p>
+
+<h3>Bad Guy</h3>
+<iframe width="614" height="345" src="https://www.youtube.com/embed/pRh9rKd2j64?start=30" title="Bad Guy"
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+</br>
+<p class="lead mb-0" align="justify">
+    This example illustrates how both, audio and audiovisual models, can recover the girl's voice separating from
+    accompaniment.
+</p>
+Mixture</br>
+<audio
+        controls
+        src="../estimated_demo/pRh9rKd2j64_0_15_to_0_55/mix_pRh9rKd2j64_0_15_to_0_55.wav">
+    Your browser does not support the
+    <code>audio</code> element.
+</audio>
+</br>
+Y-Net-r prediction</br>
+<img src="../estimated_demo/pRh9rKd2j64_0_15_to_0_55/y-net-r_pRh9rKd2j64_0_15_to_0_55.PNG" alt="Italian Trulli"></br>
+<audio
+        controls
+        src="../estimated_demo/pRh9rKd2j64_0_15_to_0_55/y-net-r_pRh9rKd2j64_0_15_to_0_55.wav">
+    Your browser does not support the
+    <code>audio</code> element.
+</audio>
+</br>
+Y-Net-m prediction</br>
+<img src="../estimated_demo/pRh9rKd2j64_0_15_to_0_55/y-net-m_pRh9rKd2j64_0_15_to_0_55.PNG" alt="Italian Trulli"></br>
+<audio
+        controls
+        src="../estimated_demo/pRh9rKd2j64_0_15_to_0_55/y-net-m_pRh9rKd2j64_0_15_to_0_55.wav">
+    Your browser does not support the
+    <code>audio</code> element.
+</audio>
+</br>
+</body>
+</html>
