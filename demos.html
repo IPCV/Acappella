@@ -2,7 +2,7 @@
 layout: page
 ---
 
-PAGE IS UNDER DEVELOPMENT. PLEASE CHECK AGAIN AFTER 06-APRIL-2021.
+CLICK CTRL+SHIFT+R TO VIEW THE UPDATED PAGE. PAGE IS UNDER DEVELOPMENT. PLEASE CHECK AGAIN AFTER 06-APRIL-2021.
 
   <p class="lead mb-0" align="justify">
 Dear reader, YouTube videos will start in the segment of interest. The recommended way of visualizing the demos is to pay attention to the singer/s lips and then to hear
@@ -31,42 +31,58 @@ Dear reader, YouTube videos will start in the segment of interest. The recommend
          
     Queen Medley is a good example of how Y-Net pays attention to the motion lips. When lips are closed, system returns a silent signal even if it hasn't
           been trained to do so. On contrary, look into listen at the cocktail party returns a non-silent signal.  </br>
-    
-</p>
-  Mixture</br>
-    <audio
-        controls
-        src="../estimated_demo/sEnTMgzw8ow_2_11_to_2_33/mix_sEnTMgzw8ow_2_11_to_2_33.wav">
-            Your browser does not support the
-            <code>audio</code> element.
-    </audio></br>
-  Y-Net-r prediction</br>
-    <img src="../estimated_demo/sEnTMgzw8ow_2_11_to_2_33/y-net-r_sEnTMgzw8ow_2_11_to_2_33_lead-vocals.PNG" alt="Italian Trulli"></br>
-    <audio
-        controls
-        src="../estimated_demo/sEnTMgzw8ow_2_11_to_2_33/y-net-r_sEnTMgzw8ow_2_11_to_2_33_lead-vocals.wav">
-            Your browser does not support the
-            <code>audio</code> element.
-    </audio></br>
-    Y-Net-m prediction</br>
-    <img src="../estimated_demo/sEnTMgzw8ow_2_11_to_2_33/y-net-m_sEnTMgzw8ow_2_11_to_2_33_lead-vocals.PNG" alt="Italian Trulli"></br>
-    <audio
-        controls
-        src="../estimated_demo/sEnTMgzw8ow_2_11_to_2_33/y-net-m_sEnTMgzw8ow_2_11_to_2_33_lead-vocals.wav">
-            Your browser does not support the
-            <code>audio</code> element.
-     </audio></br>
-    U-Net prediction</br>
-    <img src="../estimated_demo/sEnTMgzw8ow_2_11_to_2_33/ao_sEnTMgzw8ow_2_11_to_2_33_lead-vocals.png" alt="Italian Trulli"></br>
-    <audio
-        controls
-        src="../estimated_demo/sEnTMgzw8ow_2_11_to_2_33/ao_sEnTMgzw8ow_2_11_to_2_33_lead-vocals.wav">
-            Your browser does not support the
-            <code>audio</code> element.
-     </audio></br>
+
+  </p>
+  <div class="row">
+        <div class="col-lg-10" style="padding-bottom: 1em;display: flex">
+          <h5 style="padding-top: 1em;width: 40%">Estimates</h5>
+          <p style="padding-top: 1em">Mix</p>
+          <audio class="src4mixaudio"
+                 src="../estimated_demo/sEnTMgzw8ow_2_11_to_2_33/mix_sEnTMgzw8ow_2_11_to_2_33.mp3"
+                 controls=""></audio>
+        </div>
+        <div class="border">
+          <div style="display: flex">
+            <div class="column" style="padding-left:1.5em;display: flex">
+              <div style="padding-top: 0.5em;display: flex">
+                <div class="col-xs-1 excol3">
+                  <div class="src4_model">U-Net</div>
+                  <img class="spec"
+                       src="../estimated_demo/sEnTMgzw8ow_2_11_to_2_33/ao_sEnTMgzw8ow_2_11_to_2_33_lead-vocals.png">
+                  <div class="col-xs-1 excol3">
+                      <audio class="src4audio"
+                             src="../estimated_demo/sEnTMgzw8ow_2_11_to_2_33/ao_sEnTMgzw8ow_2_11_to_2_33_lead-vocals.mp3"
+                             controls=""></audio></div>
+                </div>
+                <div class="col-xs-1 excol3">
+                  <div style="padding-left: 35px">LLCP</div>
+                  <img class="spec"
+                       src="../estimated_demo/sEnTMgzw8ow_2_11_to_2_33/llcp_sEnTMgzw8ow_2_11_to_2_33_lead-vocals.png">
+                  <div class="col-xs-1 excol3">
+                      <audio class="src4audio"
+                             src="../estimated_demo/sEnTMgzw8ow_2_11_to_2_33/llcp_sEnTMgzw8ow_2_11_to_2_33_lead-vocals.mp3"
+                             controls=""></audio></div>
+                </div>
+                <div class="col-xs-1 excol3">
+                  <div style="padding-left: 65px">Y-Net-m</div>
+                  <img class="spec" src="../estimated_demo/sEnTMgzw8ow_2_11_to_2_33/y-net-m_sEnTMgzw8ow_2_11_to_2_33_lead-vocals.png">
+                  <div class="col-xs-1 excol3"><audio class="src4audio"
+                                                      src="../estimated_demo/sEnTMgzw8ow_2_11_to_2_33/y-net-m_sEnTMgzw8ow_2_11_to_2_33_lead-vocals.mp3"
+                                                      controls=""></audio></div>
+                </div>
+                <div class="col-xs-1 excol3">
+                  <div style="padding-left: 80px">Y-Net-r</div>
+                  <img class="spec" src="../estimated_demo/sEnTMgzw8ow_2_11_to_2_33/y-net-r_sEnTMgzw8ow_2_11_to_2_33_lead-vocals.png">
+                  <div class="col-xs-1 excol3"><audio class="src4audio"
+                                                      src="../estimated_demo/sEnTMgzw8ow_2_11_to_2_33/y-net-r_sEnTMgzw8ow_2_11_to_2_33_lead-vocals.mp3"
+                                                      controls=""></audio></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  </div>
 <p></p>
-
-
 
     <div class="row">
     <h3 class="col-sm-4" style="display: inline-block">Disney Medley</h3>
@@ -85,43 +101,58 @@ Dear reader, YouTube videos will start in the segment of interest. The recommend
         allowfullscreen></iframe>
     </br>
   <p class="lead mb-0" align="justify">
-
-
     
-</p>
-  Mixture</br>
-    <audio
-        controls
-        src="../estimated_demo/Dyo7jzaCUhk_0_02_to_5_2/mix_Dyo7jzaCUhk_0_02_to_5_2.wav">
-            Your browser does not support the
-            <code>audio</code> element.
-    </audio></br>
-  Y-Net-r prediction</br>
-    <img src="../estimated_demo/Dyo7jzaCUhk_0_02_to_5_2/y-net-r_Dyo7jzaCUhk_0_02_to_5_2_2-2.PNG" alt="Italian Trulli"></br>
-    <audio
-        controls
-        src="../estimated_demo/Dyo7jzaCUhk_0_02_to_5_2/y-net-r_Dyo7jzaCUhk_0_02_to_5_2_2-2.wav">
-            Your browser does not support the
-            <code>audio</code> element.
-    </audio></br>
-    Y-Net-m prediction</br>
-    <img src="../estimated_demo/Dyo7jzaCUhk_0_02_to_5_2/y-net-m_Dyo7jzaCUhk_0_02_to_5_2_2-2.PNG" alt="Italian Trulli"></br>
-    <audio
-        controls
-        src="../estimated_demo/Dyo7jzaCUhk_0_02_to_5_2/y-net-m_Dyo7jzaCUhk_0_02_to_5_2_2-2.wav">
-            Your browser does not support the
-            <code>audio</code> element.
-     </audio></br>
-    U-Net prediction</br>
-    <img src="../estimated_demo/Dyo7jzaCUhk_0_02_to_5_2/ao_Dyo7jzaCUhk_0_02_to_5_2_2-2.PNG" alt="Italian Trulli"></br>
-    <audio
-        controls
-        src="../estimated_demo/Dyo7jzaCUhk_0_02_to_5_2/ao_Dyo7jzaCUhk_0_02_to_5_2_2-2.wav">
-            Your browser does not support the
-            <code>audio</code> element.
-     </audio></br>
+  </p>
+  <div class="row">
+        <div class="col-lg-10" style="padding-bottom: 1em;display: flex">
+          <h5 style="padding-top: 1em;width: 40%">Estimates</h5>
+          <p style="padding-top: 1em">Mix</p>
+          <audio class="src4mixaudio"
+                 src="../estimated_demo/Dyo7jzaCUhk_0_02_to_5_2/mix_Dyo7jzaCUhk_0_02_to_5_2.mp3"
+                 controls=""></audio>
+        </div>
+        <div class="border">
+          <div style="display: flex">
+            <div class="column" style="padding-left:1.5em;display: flex">
+              <div style="padding-top: 0.5em;display: flex">
+                <div class="col-xs-1 excol3">
+                  <div class="src4_model">U-Net</div>
+                  <img class="spec"
+                       src="../estimated_demo/Dyo7jzaCUhk_0_02_to_5_2/ao_Dyo7jzaCUhk_0_02_to_5_2_2-2.png">
+                  <div class="col-xs-1 excol3">
+                      <audio class="src4audio"
+                             src="../estimated_demo/Dyo7jzaCUhk_0_02_to_5_2/ao_Dyo7jzaCUhk_0_02_to_5_2_2-2.mp3"
+                             controls=""></audio></div>
+                </div>
+                <div class="col-xs-1 excol3">
+                  <div style="padding-left: 35px">LLCP</div>
+                  <img class="spec"
+                       src="../estimated_demo/Dyo7jzaCUhk_0_02_to_5_2/llcp_Dyo7jzaCUhk_0_02_to_5_2_2-2.png">
+                  <div class="col-xs-1 excol3">
+                      <audio class="src4audio"
+                             src="../estimated_demo/Dyo7jzaCUhk_0_02_to_5_2/llcp_Dyo7jzaCUhk_0_02_to_5_2_2-2.mp3"
+                             controls=""></audio></div>
+                </div>
+                <div class="col-xs-1 excol3">
+                  <div style="padding-left: 65px">Y-Net-m</div>
+                  <img class="spec" src="../estimated_demo/Dyo7jzaCUhk_0_02_to_5_2/y-net-m_Dyo7jzaCUhk_0_02_to_5_2_2-2.png">
+                  <div class="col-xs-1 excol3"><audio class="src4audio"
+                                                      src="../estimated_demo/Dyo7jzaCUhk_0_02_to_5_2/y-net-m_Dyo7jzaCUhk_0_02_to_5_2_2-2.mp3"
+                                                      controls=""></audio></div>
+                </div>
+                <div class="col-xs-1 excol3">
+                  <div style="padding-left: 80px">Y-Net-r</div>
+                  <img class="spec" src="../estimated_demo/Dyo7jzaCUhk_0_02_to_5_2/y-net-r_Dyo7jzaCUhk_0_02_to_5_2_2-2.png">
+                  <div class="col-xs-1 excol3"><audio class="src4audio"
+                                                      src="../estimated_demo/Dyo7jzaCUhk_0_02_to_5_2/y-net-r_Dyo7jzaCUhk_0_02_to_5_2_2-2.mp3"
+                                                      controls=""></audio></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  </div>
 <p></p>
-
 
     <div class="row">
     <h3 class="col-sm-4" style="display: inline-block">Isn't She Lovely (Sample 1)</h3>
@@ -148,40 +179,56 @@ voices.</br>
     
 </p>
 TOP RIGHT VOICE:</br>
-  Mixture</br>
-    <audio
-        controls
-        src="../estimated_demo/cttFanV0o7c_0_07_to_2_44/mix_cttFanV0o7c_0_07_to_2_44.wav">
-            Your browser does not support the
-            <code>audio</code> element.
-    </audio></br>
-
-  Y-Net-r prediction</br>
-    <img src="../estimated_demo/cttFanV0o7c_0_07_to_2_44/y-net-r_cttFanV0o7c_0_07_to_2_44_top-right.PNG" alt="Italian Trulli"></br>
-    <audio
-        controls
-        src="../estimated_demo/cttFanV0o7c_0_07_to_2_44/y-net-r_cttFanV0o7c_0_07_to_2_44_top-right.wav">
-            Your browser does not support the
-            <code>audio</code> element.
-    </audio></br>
-    Y-Net-m prediction</br>
-    <img src="../estimated_demo/cttFanV0o7c_0_07_to_2_44/y-net-m_cttFanV0o7c_0_07_to_2_44_top-right.PNG" alt="Italian Trulli"></br>
-    <audio
-        controls
-        src="../estimated_demo/cttFanV0o7c_0_07_to_2_44/y-net-m_cttFanV0o7c_0_07_to_2_44_top-right.wav">
-            Your browser does not support the
-            <code>audio</code> element.
-     </audio></br>
-    U-Net prediction</br>
-        <img src="../estimated_demo/cttFanV0o7c_0_07_to_2_44/ao_cttFanV0o7c_0_07_to_2_44_top-right.png" alt="Italian Trulli"></br>
-        <audio
-            controls
-            src="../estimated_demo/cttFanV0o7c_0_07_to_2_44/ao_cttFanV0o7c_0_07_to_2_44_top-right.wav">
-                Your browser does not support the
-                <code>audio</code> element.
-        </audio></br>
+  <div class="row">
+        <div class="col-lg-10" style="padding-bottom: 1em;display: flex">
+          <h5 style="padding-top: 1em;width: 40%">Estimates</h5>
+          <p style="padding-top: 1em">Mix</p>
+          <audio class="src4mixaudio"
+                 src="../estimated_demo/cttFanV0o7c_0_07_to_2_44/mix_cttFanV0o7c_0_07_to_2_44_top-right.mp3"
+                 controls=""></audio>
+        </div>
+        <div class="border">
+          <div style="display: flex">
+            <div class="column" style="padding-left:1.5em;display: flex">
+              <div style="padding-top: 0.5em;display: flex">
+                <div class="col-xs-1 excol3">
+                  <div class="src4_model">U-Net</div>
+                  <img class="spec"
+                       src="../estimated_demo/cttFanV0o7c_0_07_to_2_44/ao_cttFanV0o7c_0_07_to_2_44_top-right.png">
+                  <div class="col-xs-1 excol3">
+                      <audio class="src4audio"
+                             src="../estimated_demo/cttFanV0o7c_0_07_to_2_44/ao_cttFanV0o7c_0_07_to_2_44_top-right.mp3"
+                             controls=""></audio></div>
+                </div>
+                <div class="col-xs-1 excol3">
+                  <div style="padding-left: 35px">LLCP</div>
+                  <img class="spec"
+                       src="../estimated_demo/cttFanV0o7c_0_07_to_2_44/llcp_cttFanV0o7c_0_07_to_2_44_top-right.png">
+                  <div class="col-xs-1 excol3">
+                      <audio class="src4audio"
+                             src="../estimated_demo/cttFanV0o7c_0_07_to_2_44/llcp_cttFanV0o7c_0_07_to_2_44_top-right.mp3"
+                             controls=""></audio></div>
+                </div>
+                <div class="col-xs-1 excol3">
+                  <div style="padding-left: 65px">Y-Net-m</div>
+                  <img class="spec" src="../estimated_demo/cttFanV0o7c_0_07_to_2_44/y-net-m_cttFanV0o7c_0_07_to_2_44_top-right.png">
+                  <div class="col-xs-1 excol3"><audio class="src4audio"
+                                                      src="../estimated_demo/cttFanV0o7c_0_07_to_2_44/y-net-m_cttFanV0o7c_0_07_to_2_44_top-right.mp3"
+                                                      controls=""></audio></div>
+                </div>
+                <div class="col-xs-1 excol3">
+                  <div style="padding-left: 80px">Y-Net-r</div>
+                  <img class="spec" src="../estimated_demo/cttFanV0o7c_0_07_to_2_44/y-net-r_cttFanV0o7c_0_07_to_2_44_top-right.png">
+                  <div class="col-xs-1 excol3"><audio class="src4audio"
+                                                      src="../estimated_demo/cttFanV0o7c_0_07_to_2_44/y-net-r_cttFanV0o7c_0_07_to_2_44_top-right.mp3"
+                                                      controls=""></audio></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  </div>
 <p></p>
-
 
     <div class="row">
     <h3 class="col-sm-4" style="display: inline-block">Isn't She Lovely (Sample 2)</h3>
@@ -209,45 +256,55 @@ voices.</br>
 </p>
 
 BOTTOM LEFT VOICE:</br>
-  Mixture</br>
-    <audio
-        controls
-        src="../estimated_demo/cttFanV0o7c_0_07_to_2_44/mix_cttFanV0o7c_0_07_to_2_44_shortdemo.wav">
-            Your browser does not support the
-            <code>audio</code> element.
-    </audio></br>
-  Y-Net-r prediction</br>
-    <img src="../estimated_demo/cttFanV0o7c_0_07_to_2_44/y-net-r_cttFanV0o7c_0_07_to_2_44_bottom_left.PNG" alt="Italian Trulli"></br>
-    <audio
-        controls
-        src="../estimated_demo/cttFanV0o7c_0_07_to_2_44/y-net-r_cttFanV0o7c_0_07_to_2_44_bottom_left.wav">
-            Your browser does not support the
-            <code>audio</code> element.
-    </audio></br>
-    Y-Net-m prediction</br>
-    <img src="../estimated_demo/cttFanV0o7c_0_07_to_2_44/y-net-m_cttFanV0o7c_0_07_to_2_44_bottom_left.PNG" alt="Italian Trulli"></br>
-    <audio
-        controls
-        src="../estimated_demo/cttFanV0o7c_0_07_to_2_44/y-net-m_cttFanV0o7c_0_07_to_2_44_bottom_left.wav">
-            Your browser does not support the
-            <code>audio</code> element.
-     </audio></br>
-    LLCP prediction</br>
-    <img src="../estimated_demo/cttFanV0o7c_0_07_to_2_44/llcp_cttFanV0o7c_0_07_to_2_44_bottom_left.png" alt="Italian Trulli"></br>
-    <audio
-        controls
-        src="../estimated_demo/cttFanV0o7c_0_07_to_2_44/llcp_cttFanV0o7c_0_07_to_2_44_bottom_left.wav">
-            Your browser does not support the
-            <code>audio</code> element.
-    </audio></br>
-    U-Net prediction</br>
-    <img src="../estimated_demo/cttFanV0o7c_0_07_to_2_44/ao_cttFanV0o7c_0_07_to_2_44_bottom_left.png" alt="Italian Trulli"></br>
-    <audio
-        controls
-        src="../estimated_demo/cttFanV0o7c_0_07_to_2_44/ao_cttFanV0o7c_0_07_to_2_44_bottom_left.wav">
-            Your browser does not support the
-            <code>audio</code> element.
-    </audio></br>
+    <div class="row">
+        <div class="col-lg-10" style="padding-bottom: 1em;display: flex">
+          <h5 style="padding-top: 1em;width: 40%">Estimates</h5>
+          <p style="padding-top: 1em">Mix</p>
+          <audio class="src4mixaudio"
+                 src="../estimated_demo/cttFanV0o7c_0_07_to_2_44/mix_cttFanV0o7c_0_07_to_2_44_bottom-left.mp3"
+                 controls=""></audio>
+        </div>
+        <div class="border">
+          <div style="display: flex">
+            <div class="column" style="padding-left:1.5em;display: flex">
+              <div style="padding-top: 0.5em;display: flex">
+                <div class="col-xs-1 excol3">
+                  <div class="src4_model">U-Net</div>
+                  <img class="spec"
+                       src="../estimated_demo/cttFanV0o7c_0_07_to_2_44/ao_cttFanV0o7c_0_07_to_2_44_bottom-left.png">
+                  <div class="col-xs-1 excol3">
+                      <audio class="src4audio"
+                             src="../estimated_demo/cttFanV0o7c_0_07_to_2_44/ao_cttFanV0o7c_0_07_to_2_44_bottom-left.mp3"
+                             controls=""></audio></div>
+                </div>
+                <div class="col-xs-1 excol3">
+                  <div style="padding-left: 35px">LLCP</div>
+                  <img class="spec"
+                       src="../estimated_demo/cttFanV0o7c_0_07_to_2_44/llcp_cttFanV0o7c_0_07_to_2_44_bottom-left.png">
+                  <div class="col-xs-1 excol3">
+                      <audio class="src4audio"
+                             src="../estimated_demo/cttFanV0o7c_0_07_to_2_44/llcp_cttFanV0o7c_0_07_to_2_44_bottom-left.mp3"
+                             controls=""></audio></div>
+                </div>
+                <div class="col-xs-1 excol3">
+                  <div style="padding-left: 65px">Y-Net-m</div>
+                  <img class="spec" src="../estimated_demo/cttFanV0o7c_0_07_to_2_44/y-net-m_cttFanV0o7c_0_07_to_2_44_bottom-left.png">
+                  <div class="col-xs-1 excol3"><audio class="src4audio"
+                                                      src="../estimated_demo/cttFanV0o7c_0_07_to_2_44/y-net-m_cttFanV0o7c_0_07_to_2_44_bottom-left.mp3"
+                                                      controls=""></audio></div>
+                </div>
+                <div class="col-xs-1 excol3">
+                  <div style="padding-left: 80px">Y-Net-r</div>
+                  <img class="spec" src="../estimated_demo/cttFanV0o7c_0_07_to_2_44/y-net-r_cttFanV0o7c_0_07_to_2_44_bottom-left.png">
+                  <div class="col-xs-1 excol3"><audio class="src4audio"
+                                                      src="../estimated_demo/cttFanV0o7c_0_07_to_2_44/y-net-r_cttFanV0o7c_0_07_to_2_44_bottom-left.mp3"
+                                                      controls=""></audio></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  </div>
 <p></p>
     <div class="row">
     <h3 class="col-sm-4" style="display: inline-block">Bad Guy</h3>
@@ -268,37 +325,55 @@ BOTTOM LEFT VOICE:</br>
   <p class="lead mb-0" align="justify">
     This example illustrates how both, audio and audiovisual models, can recover the girl's voice separating from accompaniment. 
 </p>
-  Mixture</br>
-    <audio
-        controls
-        src="../estimated_demo/pRh9rKd2j64_0_15_to_0_55/mix_pRh9rKd2j64_0_15_to_0_55.wav">
-            Your browser does not support the
-            <code>audio</code> element.
-    </audio></br>
-  Y-Net-r prediction</br>
-    <img src="../estimated_demo/pRh9rKd2j64_0_15_to_0_55/y-net-r_pRh9rKd2j64_0_15_to_0_55.PNG" alt="Italian Trulli"></br>
-    <audio
-        controls
-        src="../estimated_demo/pRh9rKd2j64_0_15_to_0_55/y-net-r_pRh9rKd2j64_0_15_to_0_55.wav">
-            Your browser does not support the
-            <code>audio</code> element.
-    </audio></br>
-    Y-Net-m prediction</br>
-    <img src="../estimated_demo/pRh9rKd2j64_0_15_to_0_55/y-net-m_pRh9rKd2j64_0_15_to_0_55.PNG" alt="Italian Trulli"></br>
-    <audio
-        controls
-        src="../estimated_demo/pRh9rKd2j64_0_15_to_0_55/y-net-m_pRh9rKd2j64_0_15_to_0_55.wav">
-            Your browser does not support the
-            <code>audio</code> element.
-     </audio></br>
-    U-Net prediction</br>
-        <img src="../estimated_demo/pRh9rKd2j64_0_15_to_0_55/ao_pRh9rKd2j64_0_15_to_0_55.png" alt="Italian Trulli"></br>
-        <audio
-            controls
-            src="../estimated_demo/pRh9rKd2j64_0_15_to_0_55/ao_pRh9rKd2j64_0_15_to_0_55.wav">
-                Your browser does not support the
-                <code>audio</code> element.
-         </audio></br>
+  <div class="row">
+        <div class="col-lg-10" style="padding-bottom: 1em;display: flex">
+          <h5 style="padding-top: 1em;width: 40%">Estimates</h5>
+          <p style="padding-top: 1em">Mix</p>
+          <audio class="src4mixaudio"
+                 src="../estimated_demo/pRh9rKd2j64_0_15_to_0_55/mix_pRh9rKd2j64_0_15_to_0_55.mp3"
+                 controls=""></audio>
+        </div>
+        <div class="border">
+          <div style="display: flex">
+            <div class="column" style="padding-left:1.5em;display: flex">
+              <div style="padding-top: 0.5em;display: flex">
+                <div class="col-xs-1 excol3">
+                  <div class="src4_model">U-Net</div>
+                  <img class="spec"
+                       src="../estimated_demo/pRh9rKd2j64_0_15_to_0_55/ao_pRh9rKd2j64_0_15_to_0_55.png">
+                  <div class="col-xs-1 excol3">
+                      <audio class="src4audio"
+                             src="../estimated_demo/pRh9rKd2j64_0_15_to_0_55/ao_pRh9rKd2j64_0_15_to_0_55.mp3"
+                             controls=""></audio></div>
+                </div>
+                <div class="col-xs-1 excol3">
+                  <div style="padding-left: 35px">LLCP</div>
+                  <img class="spec"
+                       src="../estimated_demo/pRh9rKd2j64_0_15_to_0_55/llcp_pRh9rKd2j64_0_15_to_0_55.png">
+                  <div class="col-xs-1 excol3">
+                      <audio class="src4audio"
+                             src="../estimated_demo/pRh9rKd2j64_0_15_to_0_55/llcp_pRh9rKd2j64_0_15_to_0_55.mp3"
+                             controls=""></audio></div>
+                </div>
+                <div class="col-xs-1 excol3">
+                  <div style="padding-left: 65px">Y-Net-m</div>
+                  <img class="spec" src="../estimated_demo/pRh9rKd2j64_0_15_to_0_55/y-net-m_pRh9rKd2j64_0_15_to_0_55.png">
+                  <div class="col-xs-1 excol3"><audio class="src4audio"
+                                                      src="../estimated_demo/pRh9rKd2j64_0_15_to_0_55/y-net-m_pRh9rKd2j64_0_15_to_0_55.mp3"
+                                                      controls=""></audio></div>
+                </div>
+                <div class="col-xs-1 excol3">
+                  <div style="padding-left: 80px">Y-Net-r</div>
+                  <img class="spec" src="../estimated_demo/pRh9rKd2j64_0_15_to_0_55/y-net-r_pRh9rKd2j64_0_15_to_0_55.png">
+                  <div class="col-xs-1 excol3"><audio class="src4audio"
+                                                      src="../estimated_demo/pRh9rKd2j64_0_15_to_0_55/y-net-r_pRh9rKd2j64_0_15_to_0_55.mp3"
+                                                      controls=""></audio></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  </div>
 <p></p>
     <div class="row">
     <h3 class="col-sm-4" style="display: inline-block">Paranoid Android</h3>
@@ -319,43 +394,53 @@ BOTTOM LEFT VOICE:</br>
   <p class="lead mb-0" align="justify">
     This example illustrates how both, audio and audiovisual models, can recover the girl's voice separating from accompaniment.
 </p>
-  Mixture</br>
-    <audio
-        controls
-        src="../estimated_demo/Gayh_GrCKgU_5_11_to_5_35/mix_Gayh_GrCKgU_5_11_to_5_35.wav">
-            Your browser does not support the
-            <code>audio</code> element.
-    </audio></br>
-  Y-Net-r prediction</br>
-    <img src="../estimated_demo/Gayh_GrCKgU_5_11_to_5_35/y-net-r_Gayh_GrCKgU_5_11_to_5_35.PNG" alt="Italian Trulli"></br>
-    <audio
-        controls
-        src="../estimated_demo/Gayh_GrCKgU_5_11_to_5_35/y-net-r_Gayh_GrCKgU_5_11_to_5_35.wav">
-            Your browser does not support the
-            <code>audio</code> element.
-    </audio></br>
-    Y-Net-m prediction</br>
-    <img src="../estimated_demo/Gayh_GrCKgU_5_11_to_5_35/y-net-m_Gayh_GrCKgU_5_11_to_5_35.PNG" alt="Italian Trulli"></br>
-    <audio
-        controls
-        src="../estimated_demo/Gayh_GrCKgU_5_11_to_5_35/y-net-m_Gayh_GrCKgU_5_11_to_5_35.wav">
-            Your browser does not support the
-            <code>audio</code> element.
-     </audio></br>
-    LLCP prediction</br>
-        <img src="../estimated_demo/Gayh_GrCKgU_5_11_to_5_35/llcp_Gayh_GrCKgU_5_11_to_5_35.png" alt="Italian Trulli"></br>
-        <audio
-            controls
-            src="../estimated_demo/Gayh_GrCKgU_5_11_to_5_35/llcp_Gayh_GrCKgU_5_11_to_5_35.wav">
-                Your browser does not support the
-                <code>audio</code> element.
-         </audio></br>
-    U-Net prediction</br>
-        <img src="../estimated_demo/Gayh_GrCKgU_5_11_to_5_35/ao_Gayh_GrCKgU_5_11_to_5_35.png" alt="Italian Trulli"></br>
-        <audio
-            controls
-            src="../estimated_demo/Gayh_GrCKgU_5_11_to_5_35/ao_Gayh_GrCKgU_5_11_to_5_35.wav">
-                Your browser does not support the
-                <code>audio</code> element.
-         </audio></br>
+  <div class="row">
+        <div class="col-lg-10" style="padding-bottom: 1em;display: flex">
+          <h5 style="padding-top: 1em;width: 40%">Estimates</h5>
+          <p style="padding-top: 1em">Mix</p>
+          <audio class="src4mixaudio"
+                 src="../estimated_demo/Gayh_GrCKgU_5_11_to_5_35/mix_Gayh_GrCKgU_5_11_to_5_35.mp3"
+                 controls=""></audio>
+        </div>
+        <div class="border">
+          <div style="display: flex">
+            <div class="column" style="padding-left:1.5em;display: flex">
+              <div style="padding-top: 0.5em;display: flex">
+                <div class="col-xs-1 excol3">
+                  <div class="src4_model">U-Net</div>
+                  <img class="spec"
+                       src="../estimated_demo/Gayh_GrCKgU_5_11_to_5_35/ao_Gayh_GrCKgU_5_11_to_5_35.png">
+                  <div class="col-xs-1 excol3">
+                      <audio class="src4audio"
+                             src="../estimated_demo/Gayh_GrCKgU_5_11_to_5_35/ao_Gayh_GrCKgU_5_11_to_5_35.mp3"
+                             controls=""></audio></div>
+                </div>
+                <div class="col-xs-1 excol3">
+                  <div style="padding-left: 35px">LLCP</div>
+                  <img class="spec"
+                       src="../estimated_demo/Gayh_GrCKgU_5_11_to_5_35/llcp_Gayh_GrCKgU_5_11_to_5_35.png">
+                  <div class="col-xs-1 excol3">
+                      <audio class="src4audio"
+                             src="../estimated_demo/Gayh_GrCKgU_5_11_to_5_35/llcp_Gayh_GrCKgU_5_11_to_5_35.mp3"
+                             controls=""></audio></div>
+                </div>
+                <div class="col-xs-1 excol3">
+                  <div style="padding-left: 65px">Y-Net-m</div>
+                  <img class="spec" src="../estimated_demo/Gayh_GrCKgU_5_11_to_5_35/y-net-m_Gayh_GrCKgU_5_11_to_5_35.png">
+                  <div class="col-xs-1 excol3"><audio class="src4audio"
+                                                      src="../estimated_demo/Gayh_GrCKgU_5_11_to_5_35/y-net-m_Gayh_GrCKgU_5_11_to_5_35.mp3"
+                                                      controls=""></audio></div>
+                </div>
+                <div class="col-xs-1 excol3">
+                  <div style="padding-left: 80px">Y-Net-r</div>
+                  <img class="spec" src="../estimated_demo/Gayh_GrCKgU_5_11_to_5_35/y-net-r_Gayh_GrCKgU_5_11_to_5_35.png">
+                  <div class="col-xs-1 excol3"><audio class="src4audio"
+                                                      src="../estimated_demo/Gayh_GrCKgU_5_11_to_5_35/y-net-r_Gayh_GrCKgU_5_11_to_5_35.mp3"
+                                                      controls=""></audio></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  </div>
 
