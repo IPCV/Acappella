@@ -9,6 +9,10 @@ PRESS CTRL+SHIFT+R TO VIEW THE UPDATED PAGE. PAGE IS UNDER DEVELOPMENT. PLEASE C
     the "Play" and "Stop" buttons that we have provided. The recommended way of visualizing the demos is
     to pay attention to the target singer's lip movements and then to listen to the estimated samples.
     </br>
+    <b>Note: </b>Please be aware that, sometimes, the differences between the different methods are subtle.
+    We recommend the use of headphones when listening to them. We also would like to draw attention to the
+    spectrograms for visual cues that might better help perceive the differences.
+    </br>
 </p>
 <div class="row">
     <h3 class="col-sm-4" style="display: inline-block">Isn't She Lovely (Sample 1)</h3>
@@ -204,8 +208,11 @@ BOTTOM LEFT VOICE:</br>
         allowfullscreen></iframe>
 </br>
 <p class="lead mb-0" align="justify">
-    This example illustrates how both, audio and audiovisual models, can recover the girl's voice separating from
-    accompaniment.
+    This is an example with multiple singing voices of the same singer along with the background music.
+    It is more challenging than the previous examples because of the presence of background music in addition to
+    the voices. We are trying to estimate the center singer's voice.
+    Our models (Y-Net) estimate this voice better than the baseline models in the sense that the target singer
+    voice is enhanced the most in Y-Net.
 </p>
 <div class="row">
     <div class="col-lg-10" style="padding-bottom: 1em;display: flex">
@@ -283,7 +290,13 @@ BOTTOM LEFT VOICE:</br>
         allowfullscreen></iframe>
 </br>
 <p class="lead mb-0" align="justify">
-
+    In this example, there seem to be only voices without instrumental accompaniment. However, there are voices
+    which are trying to mimic instruments. For example, there is a beatboxing voice which mimics drum kit sounds
+    like kicks and snares. We are interested in estimating the voice of the singer in the center.
+    The estimate of the audio-only model U-Net sounds distorted in the region around the words "in perfect".
+    The other audio-visual models do not have this problem. The beatboxing voice is suppressed better in our Y-Net
+    estimates than in the LLCP estimate: for example, the snare drum sound that appears around the word "for"
+    is leaking more in the LLCP estimate and the U-Net estimate than in the Y-Net estimates.
 </p>
 <div class="row">
     <div class="col-lg-10" style="padding-bottom: 1em;display: flex">
