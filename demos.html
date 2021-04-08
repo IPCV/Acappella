@@ -293,10 +293,11 @@ BOTTOM LEFT VOICE:</br>
     In this example, there seem to be only voices without instrumental accompaniment. However, there are voices
     which are trying to mimic instruments. For example, there is a beatboxing voice which mimics drum kit sounds
     like kicks and snares. We are interested in estimating the voice of the singer in the center.
-    The estimate of the audio-only model U-Net sounds distorted in the region around the words "in perfect".
+    The estimate of the audio-only model U-Net sounds attenuated in the region around the words "in perfect".
     The other audio-visual models do not have this problem. The beatboxing voice is suppressed better in our Y-Net
     estimates than in the LLCP estimate: for example, the snare drum sound that appears around the word "for"
-    is leaking more in the LLCP estimate and the U-Net estimate than in the Y-Net estimates.
+    is leaking more in the LLCP estimate and the U-Net estimate than in the Y-Net estimates. Y-Net-r gets the word
+    "once" more clearly than the Y-Net-m. Y-Net-r seems to be the best model here.
 </p>
 <div class="row">
     <div class="col-lg-10" style="padding-bottom: 1em;display: flex">
@@ -376,10 +377,12 @@ BOTTOM LEFT VOICE:</br>
 <p class="lead mb-0" align="justify">
 
     In this example, we are trying to estimate the voice of the singer in the center.
-    As expected, all our models fail in the part which goes "the show must go on" since it is sung simultaeneously
+    As expected, our models do not single out a voice in the part which goes "the show must go on" since it is sung simultaeneously
     by the center, left-middle and right-middle faces with almost the same lip motions.
-    All the models seem to give similar estimates for the singer in the center.
-    Note that there are subtle differences in the spectrograms.
+    Note that the audio-visual models enhance "the show must go on" part much better than the audio-only model (U-Net).
+    LLCP model attenuates the word "must" more than Y-Net. In Y-Net-m, all the voices (including the background vocals)
+    seem to be boosted just before the words "the show" (also visible in the spectrogram around t=3s).
+    Such an effect is not seen in Y-Net-r. Y-Net-r seems to be the best performing model here.
     </br>
 
 </p>
