@@ -9,9 +9,10 @@ PRESS CTRL+SHIFT+R TO VIEW THE UPDATED PAGE. PAGE IS UNDER DEVELOPMENT. PLEASE C
     the "Play" and "Stop" buttons that we have provided. The recommended way of visualizing the demos is
     to pay attention to the target singer's lip movements and then to listen to the estimated samples.
     </br>
-    <b>Note: </b>Please be aware that, sometimes, the differences between the different methods are subtle.
+    <b>Note: </b>Please be aware that, sometimes, the perceivable differences in the singing voice estimates
+    across different models are subtle.
     We recommend the use of headphones when listening to them. We also would like to draw attention to the
-    spectrograms for visual cues that might better help perceive the differences.
+    spectrograms for visual cues that might better help perceive these differences.
     </br>
 </p></br>
 <h2>Real World Examples</h2>
@@ -43,7 +44,7 @@ PRESS CTRL+SHIFT+R TO VIEW THE UPDATED PAGE. PAGE IS UNDER DEVELOPMENT. PLEASE C
     we choose a segment in this video where the lip motions differ for various voices at some point.
     In this example, the desired voice to separate is that of the <b>top-right</b> face.
     We show that our Y-Net outperforms the
-    baseline models - the audio-only model U-Net and LLCP (Looking to listen at the cocktail party[1] model).
+    baseline models - the audio-only model U-Net and LLCP (Looking to listen at the cocktail party model [1]).
     Listen carefully to the part where it goes "Isn't she pretty".
     In LLCP estimate, multiple voices are leaking into its estimate. Our Y-net models perform better.
     It is a particularly challenging mixture since all the voices are
@@ -218,8 +219,11 @@ PRESS CTRL+SHIFT+R TO VIEW THE UPDATED PAGE. PAGE IS UNDER DEVELOPMENT. PLEASE C
     This is an example with multiple singing voices of the same singer along with the background music.
     It is more challenging than the previous examples because of the presence of background music in addition to
     the voices. We are trying to estimate the <b>center</b> singer's voice.
-    Our models (Y-Net) estimate this voice better than the baseline models in the sense that the target singer
-    voice is enhanced the most in Y-Net.
+    Both in LLCP estimate and U-Net estimate, there is undersirable abrupt
+    variation in the intensity levels of the target voice.
+    Such abnormal effects are not found in the Y-Net estimates.
+    Also, the Y-Net estimates this voice better than the baseline models in the sense that the target singer
+    voice is enhanced the most in the Y-Net estimates.
 </p>
 <div class="row">
     <div class="col-lg-10" style="padding-bottom: 1em;display: flex">
