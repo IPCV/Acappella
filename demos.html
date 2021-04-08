@@ -121,11 +121,13 @@ PRESS CTRL+SHIFT+R TO VIEW THE UPDATED PAGE. PAGE IS UNDER DEVELOPMENT. PLEASE C
 
     Here, we show another segment from the same video as in the previous example.
     But, here, we estimate the voice sung by the <b>bottom-left</b> face which is not a lead voice.
-    The bottom-left face is singing something that is not lyrical. We chose this segment for this demo
+    The <b>bottom-left</b> face is singing something that is not lyrical. We chose this segment for this demo
     because in the previous one, the accompaniment voices were making the same lip movements as the main voice.
     None of the models were trained to separate a non-lyrical voice like this, but our Y-Net outperforms the other
     models by suppressing the other voices.
     This song shows that our Y-Net can also separate accompaniment voices.
+    In this case, Y-Net-r performs better than Y-Net-m, for example, in the part "making one as lovely", the Y-Net-m leaks
+    more lead voice into the estimate than Y-Net-r.
     </br>
 
 </p>
