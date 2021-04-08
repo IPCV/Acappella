@@ -4,26 +4,25 @@ gh-repo: JuanFMontesinos/Acappella
 gh-badge: [star, watch, fork, follow]
 share-description: Official website of A cappella: Audio-visual Singing Voice Separation
 ---
-  <header class="masthead text-black text-center">
-    <div class="overlay"></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-xl-12 mx-auto">
-          <h1 class="mb-5">A cappella: Audio-visual Singing Voice Separation</h1>
-        </div>
-        <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
-        </div>
-      </div>
+<div class="overlay"></div>
+<div class="container">
+  <div class="row">
+    <div class="col-xl-12 mx-auto">
+      <h1>A cappella: Audio-visual Singing Voice Separation</h1>
     </div>
-  </header>
+    <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
+    </div>
+  </div>
+</div>
 
 
+<div class="col-xl-10 col-lg-8 offset-lg-1">
 
   <!-- Testimonials -->
   <section class="testimonials text-center">
     <div class="container">
       <div class="row">
-        <div class="col-lg-3 offset-lg-2 mx-6">
+        <div class="col-lg-4">
           <div class="testimonial-item mx-auto mb-5 mb-lg-0">
             <h5>
                 <a href="mailto:juanfelipe.montesinosATupfDOTedu" style="text-decoration : none; color : #000000;">
@@ -33,7 +32,7 @@ share-description: Official website of A cappella: Audio-visual Singing Voice Se
             <p class="font-weight-light mb-0"></p>
           </div>
         </div>
-        <div class="col-lg-3">
+        <div class="col-lg-4">
           <div class="testimonial-item mx-auto mb-5 mb-lg-0">
             <h5>
                 <a href="mailto:venkatesh.kadandaleATupfDOTedu" style="text-decoration : none; color : #000000;">
@@ -43,7 +42,7 @@ share-description: Official website of A cappella: Audio-visual Singing Voice Se
             <p class="font-weight-light mb-0"></p>
           </div>
         </div>
-        <div class="col-lg-2">
+        <div class="col-lg-4">
           <div class="testimonial-item mx-auto mb-5 mb-lg-0">
             <h5>
                 <a href="mailto:gloria.haroATupfDOTedu" style="text-decoration : none; color : #000000;">
@@ -59,7 +58,7 @@ share-description: Official website of A cappella: Audio-visual Singing Voice Se
         </div>
       </div>
       <div class="row">
-        <div class="offset-lg-3 col-lg-6 padtop">
+        <div class="offset-lg-3 col-lg-6 padtop" style="padding-bottom: 2rem">
           <span class="align-middle">
             <p class="mylead2">
              <a href="https://www.upf.edu/web/etic" style="color:black">Universitat Pompeu Fabra, Barcelona, Spain</a><br>
@@ -70,22 +69,30 @@ share-description: Official website of A cappella: Audio-visual Singing Voice Se
     </div>
   </section>
 
+  <h3>Code will be released once the paper is accepted</h3>
+    <!-- Image Showcases -->
 
-<h3>Code will be released once paper is accepted</h3>
-  <!-- Image Showcases -->
+            <h2>Abstract</h2>
+            <p class="lead mb-0" align="justify">
+              Music source separation can be interpreted as the estimation
+              of the constituent music sources that a music clip is composed
+              of. In this work, we explore the single-channel singing voice
+              separation problem from a multimodal perspective, by jointly
+              learning from audio and visual modalities. To do so, we present
+              <i>Acappella</i>, a dataset spanning around 46 hours of <i>a cappella</i>
+              solo singing videos sourced from YouTube. We propose Y-Net,
+              an audio-visual convolutional neural network which achieves
+              state-of-the-art singing voice separation results on the Acappella
+              dataset and compare it against its audio-only counterpart,
+              U-Net, and a state-of-the-art audio-visual speech separation
+              model. Singing voice separation can be particularly challenging
+              when the audio mixture also comprises of other accompaniment
+              voices and background sounds along with the
+              target voice of interest. We demonstrate that our model can
+              outperform the baseline models in the singing voice separation
+              task in such challenging scenarios. The code, the pre-trained
+              models and the dataset are publicly available at
+              <a href="https://ipcv.github.io/Acappella/">https://ipcv.github.io/Acappella/</a>
+            </p>
 
-          <h2>Abstract</h2>
-          <p class="lead mb-0" align="justify">
-            Music source separation can be interpreted as the estimation of the constituent
-            music sources that a music clip is composed of. In this work, we explore the single-channel 
-            singing voice separation problem from a multimodal perspective, by jointly learning from audio and visual modalities.
-            To do so, we present \textit{Acappella}, a dataset spanning around 46 hours of acappella solo singing videos sourced from YouTube.
-            We propose Y-Net, an audio-visual convolutional neural network which achieves state-of-the-art
-            singing voice separation results on the Acappella dataset and compare it against its audio-only counterpart U-Net and
-            a state-of-the-art audio-visual speech separation model. Singing voice separation can be particularly challenging when the
-            audio mixture also comprises of other accompaniment voices and background sounds along with the target voice of interest.
-            Such accompaniment voices could be in the form of humming, beatboxing, scatting, opera singing or even a song section with lyrics.
-            The background sounds could be any musical accompaniment or some kind of noise. We demonstrate that our model can outperform the baseline 
-            models in the singing voice separation task in such challenging scenarios.
-          </p>
-
+</div>

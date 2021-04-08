@@ -55,12 +55,12 @@
 
 header.masthead {
   position: relative;
-  background-color: gainsboro!important;
+  /*background-color: gainsboro!important;*/
     padding-bottom: 0px;
 }
 
 header.masthead .overlay {
-  background-color: gainsboro;
+  /*    background-color: gainsboro;*/
 }
 
 .testimonials {

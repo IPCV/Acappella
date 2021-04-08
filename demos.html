@@ -32,36 +32,27 @@ PRESS CTRL+SHIFT+R TO VIEW THE UPDATED PAGE. PAGE IS UNDER DEVELOPMENT. PLEASE C
     </div>
 </div>
 <iframe id="isl1" class="isl1_video"
-        width="720" height="345"
+        width="100%" height="345"
         src="https://www.youtube.com/embed/cttFanV0o7c?start=49&end=57&showinfo=0&controls=0&enablejsapi=1&disablekb=1"
         title="Isn't She Lovely Sample1" frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen></iframe>
 </br>
-<p class="lead mb-0" align="justify">
-    This is an example with multiple voices and no instrumental accompaniment.
-    Since our audio-visual models (Y-Net) rely on the lip motion to estimate a voice,
-    we choose a segment in this video where the lip motions differ for various voices at some point.
-    In this example, the desired voice to separate is that of the <b>top-right</b> face.
-    We show that our Y-Net outperforms the
-    baseline models - the audio-only model U-Net and LLCP (Looking to listen at the cocktail party model [1]).
-    Listen carefully to the part where it goes "Isn't she pretty".
-    In LLCP estimate, multiple voices are leaking into its estimate. Our Y-net models perform better.
-    It is a particularly challenging mixture since all the voices are
-    performed by the same singer.</br>
-</p>
 <div class="row">
-    <div class="col-lg-10" style="padding-bottom: 1em;display: flex">
-        <h5 style="padding-top: 1em;width: 40%">Estimates</h5>
-        <p style="padding-top: 1em">Mix</p>
-        <audio class="src4mixaudio"
-               src="../estimated_demo/cttFanV0o7c_0_07_to_2_44/mix_cttFanV0o7c_0_07_to_2_44_top-right.mp3"
-               controls=""></audio>
-    </div>
     <div class="border">
         <div style="display: flex">
             <div class="column" style="padding-left:0.9em;display: flex">
                 <div style="padding-top: 0.5em;display: flex">
+                    <div class="col-xs-1 excol3">
+                        <div class="src4_model">Mixture</div>
+                        <img class="spec"
+                             src="../estimated_demo/cttFanV0o7c_0_07_to_2_44/mix_cttFanV0o7c_0_07_to_2_44_top-right.png">
+                        <div class="col-xs-1 excol3">
+                            <audio class="src4audio"
+                                   src="../estimated_demo/cttFanV0o7c_0_07_to_2_44/mix_cttFanV0o7c_0_07_to_2_44_top-right.mp3"
+                                   controls=""></audio>
+                        </div>
+                    </div>
                     <div class="col-xs-1 excol3">
                         <div class="src4_model">U-Net</div>
                         <img class="spec"
@@ -107,8 +98,20 @@ PRESS CTRL+SHIFT+R TO VIEW THE UPDATED PAGE. PAGE IS UNDER DEVELOPMENT. PLEASE C
         </div>
     </div>
 </div>
+<p class="lead mb-0" align="justify">
+    This is an example with multiple voices and no instrumental accompaniment.
+    Since our audio-visual models (Y-Net) rely on the lip motion to estimate a voice,
+    we choose a segment in this video where the lip motions differ for various voices at some point.
+    In this example, the desired voice to separate is that of the <b>top-right</b> face.
+    We show that our Y-Net outperforms the
+    baseline models - the audio-only model U-Net and LLCP (Looking to listen at the cocktail party model [1]).
+    Listen carefully to the part where it goes "Isn't she pretty".
+    In LLCP estimate, multiple voices are leaking into its estimate. Our Y-net models perform better.
+    It is a particularly challenging mixture since all the voices are
+    performed by the same singer.</br>
+</p>
 <p></p>
-
+</br></br>
 <div class="row">
     <h3 class="col-sm-4" style="display: inline-block">Isn't She Lovely (Sample 2)</h3>
     <div class="videoplay" style="display: inline-block" videoid="#isl2">
@@ -119,39 +122,28 @@ PRESS CTRL+SHIFT+R TO VIEW THE UPDATED PAGE. PAGE IS UNDER DEVELOPMENT. PLEASE C
     </div>
 </div>
 <iframe id="isl2" class="isl2_video"
-        width="720" height="345"
+        width="100%" height="345"
         src="https://www.youtube.com/embed/cttFanV0o7c?start=39&end=43&showinfo=0&controls=0&enablejsapi=1&disablekb=1"
         title="Isn't She Lovely Sample2" frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen></iframe>
 </br>
-<p class="lead mb-0" align="justify">
-
-    Here, we show another segment from the same video as in the previous example.
-    But, here, we estimate the voice sung by the <b>bottom-left</b> face which is not a lead voice.
-    The <b>bottom-left</b> face is singing something that is not lyrical. We chose this segment for this demo
-    because in the previous one, the accompaniment voices were making the same lip movements as the main voice.
-    None of the models were trained to separate a non-lyrical voice like this, but our Y-Net outperforms the other
-    models by suppressing the other voices.
-    This song shows that our Y-Net can also separate accompaniment voices.
-    In this case, Y-Net-r performs better than Y-Net-m, for example, in the part "making one as lovely", the Y-Net-m leaks
-    more lead voice into the estimate than Y-Net-r.
-    </br>
-
-</p>
 
 <div class="row">
-    <div class="col-lg-10" style="padding-bottom: 1em;display: flex">
-        <h5 style="padding-top: 1em;width: 40%">Estimates</h5>
-        <p style="padding-top: 1em">Mix</p>
-        <audio class="src4mixaudio"
-               src="../estimated_demo/cttFanV0o7c_0_07_to_2_44/mix_cttFanV0o7c_0_07_to_2_44_bottom-left.mp3"
-               controls=""></audio>
-    </div>
     <div class="border">
         <div style="display: flex">
             <div class="column" style="padding-left:0.9em;display: flex">
                 <div style="padding-top: 0.5em;display: flex">
+                    <div class="col-xs-1 excol3">
+                        <div class="src4_model">Mixture</div>
+                        <img class="spec"
+                             src="../estimated_demo/cttFanV0o7c_0_07_to_2_44/mix_cttFanV0o7c_0_07_to_2_44_bottom-left.png">
+                        <div class="col-xs-1 excol3">
+                            <audio class="src4audio"
+                                   src="../estimated_demo/cttFanV0o7c_0_07_to_2_44/mix_cttFanV0o7c_0_07_to_2_44_bottom-left.mp3"
+                                   controls=""></audio>
+                        </div>
+                    </div>
                     <div class="col-xs-1 excol3">
                         <div class="src4_model">U-Net</div>
                         <img class="spec"
@@ -197,8 +189,23 @@ PRESS CTRL+SHIFT+R TO VIEW THE UPDATED PAGE. PAGE IS UNDER DEVELOPMENT. PLEASE C
         </div>
     </div>
 </div>
-<p></p>
+<p class="lead mb-0" align="justify">
 
+    Here, we show another segment from the same video as in the previous example.
+    But, here, we estimate the voice sung by the <b>bottom-left</b> face which is not a lead voice.
+    The <b>bottom-left</b> face is singing something that is not lyrical. We chose this segment for this demo
+    because in the previous one, the accompaniment voices were making the same lip movements as the main voice.
+    None of the models were trained to separate a non-lyrical voice like this, but our Y-Net outperforms the other
+    models by suppressing the other voices.
+    This song shows that our Y-Net can also separate accompaniment voices.
+    In this case, Y-Net-r performs better than Y-Net-m, for example, in the part "making one as lovely", the Y-Net-m leaks
+    more lead voice into the estimate than Y-Net-r.
+    </br>
+
+</p>
+
+<p></p>
+</br></br>
 <div class="row">
     <h3 class="col-sm-4" style="display: inline-block">Paranoid Android</h3>
     <div class="videoplay" style="display: inline-block" videoid="#pa">
@@ -209,34 +216,28 @@ PRESS CTRL+SHIFT+R TO VIEW THE UPDATED PAGE. PAGE IS UNDER DEVELOPMENT. PLEASE C
     </div>
 </div>
 <iframe id="pa" class="pa_video"
-        width="720" height="345"
+        width="100%" height="345"
         src="https://www.youtube.com/embed/Gayh_GrCKgU?start=313&end=317&showinfo=0&controls=0&enablejsapi=1&disablekb=1"
         title="Paranoid Android" frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen></iframe>
 </br>
-<p class="lead mb-0" align="justify">
-    This is an example with multiple singing voices of the same singer along with the background music.
-    It is more challenging than the previous examples because of the presence of background music in addition to
-    the voices. We are trying to estimate the <b>center</b> singer's voice.
-    Both in LLCP estimate and U-Net estimate, there is undersirable abrupt
-    variation in the intensity levels of the target voice.
-    Such abnormal effects are not found in the Y-Net estimates.
-    Also, the Y-Net estimates this voice better than the baseline models in the sense that the target singer
-    voice is enhanced the most in the Y-Net estimates.
-</p>
+
 <div class="row">
-    <div class="col-lg-10" style="padding-bottom: 1em;display: flex">
-        <h5 style="padding-top: 1em;width: 40%">Estimates</h5>
-        <p style="padding-top: 1em">Mix</p>
-        <audio class="src4mixaudio"
-               src="../estimated_demo/Gayh_GrCKgU_5_11_to_5_35/mix_Gayh_GrCKgU_5_11_to_5_35.mp3"
-               controls=""></audio>
-    </div>
     <div class="border">
         <div style="display: flex">
             <div class="column" style="padding-left:0.9em;display: flex">
                 <div style="padding-top: 0.5em;display: flex">
+                    <div class="col-xs-1 excol3">
+                        <div class="src4_model">Mixture</div>
+                        <img class="spec"
+                             src="../estimated_demo/Gayh_GrCKgU_5_11_to_5_35/mix_Gayh_GrCKgU_5_11_to_5_35.png">
+                        <div class="col-xs-1 excol3">
+                            <audio class="src4audio"
+                                   src="../estimated_demo/Gayh_GrCKgU_5_11_to_5_35/mix_Gayh_GrCKgU_5_11_to_5_35.mp3"
+                                   controls=""></audio>
+                        </div>
+                    </div>
                     <div class="col-xs-1 excol3">
                         <div class="src4_model">U-Net</div>
                         <img class="spec"
@@ -282,8 +283,18 @@ PRESS CTRL+SHIFT+R TO VIEW THE UPDATED PAGE. PAGE IS UNDER DEVELOPMENT. PLEASE C
         </div>
     </div>
 </div>
+<p class="lead mb-0" align="justify">
+    This is an example with multiple singing voices of the same singer along with the background music.
+    It is more challenging than the previous examples because of the presence of background music in addition to
+    the voices. We are trying to estimate the <b>center</b> singer's voice.
+    Both in LLCP estimate and U-Net estimate, there is undersirable abrupt
+    variation in the intensity levels of the target voice.
+    Such abnormal effects are not found in the Y-Net estimates.
+    Also, the Y-Net estimates this voice better than the baseline models in the sense that the target singer
+    voice is enhanced the most in the Y-Net estimates.
+</p>
 <p></p>
-
+</br></br>
 <div class="row">
     <h3 class="col-sm-4" style="display: inline-block">Disney Medley</h3>
     <div class="videoplay" style="display: inline-block" videoid="#dm">
@@ -294,34 +305,27 @@ PRESS CTRL+SHIFT+R TO VIEW THE UPDATED PAGE. PAGE IS UNDER DEVELOPMENT. PLEASE C
     </div>
 </div>
 <iframe id="dm" class="dm_video"
-        width="720" height="345"
+        width="100%" height="345"
         src="https://www.youtube.com/embed/Dyo7jzaCUhk?start=44&end=52&showinfo=0&controls=0&enablejsapi=1&disablekb=1"
         title="Disney Medley" frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen></iframe>
 </br>
-<p class="lead mb-0" align="justify">
-    In this example, there seem to be only voices without instrumental accompaniment. However, there are voices
-    which are trying to mimic instruments. For example, there is a beatboxing voice which mimics drum kit sounds
-    like kicks and snares. We are interested in estimating the voice of the singer in the <b>center</b>.
-    The estimate of the audio-only model U-Net sounds attenuated in the region around the words "in perfect".
-    The other audio-visual models do not have this problem. The beatboxing voice is suppressed better in our Y-Net
-    estimates than in the LLCP estimate: for example, the snare drum sound that appears around the word "for"
-    is leaking more in the LLCP estimate and the U-Net estimate than in the Y-Net estimates. Y-Net-r gets the word
-    "once" more clearly than the Y-Net-m. Y-Net-r seems to be the best model here.
-</p>
 <div class="row">
-    <div class="col-lg-10" style="padding-bottom: 1em;display: flex">
-        <h5 style="padding-top: 1em;width: 40%">Estimates</h5>
-        <p style="padding-top: 1em">Mix</p>
-        <audio class="src4mixaudio"
-               src="../estimated_demo/Dyo7jzaCUhk_0_02_to_5_2/mix_Dyo7jzaCUhk_0_02_to_5_2.mp3"
-               controls=""></audio>
-    </div>
     <div class="border">
         <div style="display: flex">
             <div class="column" style="padding-left:0.9em;display: flex">
                 <div style="padding-top: 0.5em;display: flex">
+                    <div class="col-xs-1 excol3">
+                        <div class="src4_model">Mixture</div>
+                        <img class="spec"
+                             src="../estimated_demo/Dyo7jzaCUhk_0_02_to_5_2/mix_Dyo7jzaCUhk_0_02_to_5_2.png">
+                        <div class="col-xs-1 excol3">
+                            <audio class="src4audio"
+                                   src="../estimated_demo/Dyo7jzaCUhk_0_02_to_5_2/mix_Dyo7jzaCUhk_0_02_to_5_2.mp3"
+                                   controls=""></audio>
+                        </div>
+                    </div>
                     <div class="col-xs-1 excol3">
                         <div class="src4_model">U-Net</div>
                         <img class="spec"
@@ -367,8 +371,18 @@ PRESS CTRL+SHIFT+R TO VIEW THE UPDATED PAGE. PAGE IS UNDER DEVELOPMENT. PLEASE C
         </div>
     </div>
 </div>
+<p class="lead mb-0" align="justify">
+    This example seems to contain only the voices, without any instrumental accompaniment. However, there are voices
+    which are trying to mimic instruments. For example, there is a beatboxing voice which mimics drum kit sounds
+    like kicks and snares. We are interested in estimating the voice of the singer in the <b>center</b>.
+    The estimate of the audio-only model U-Net sounds attenuated in the region around the words "in perfect".
+    The other audio-visual models do not have this problem. The beatboxing voice is suppressed better in our Y-Net
+    estimates than in the LLCP estimate: for example, the snare drum sound that appears around the word "for"
+    is leaking more in the LLCP estimate and the U-Net estimate than in the Y-Net estimates. Y-Net-r gets the word
+    "once" more clearly than the Y-Net-m. Y-Net-r seems to be the best model here.
+</p>
 <p></p>
-
+</br></br>
 <div class="row">
     <h3 class="col-sm-4" style="display: inline-block">Queen Medley</h3>
     <div class="videoplay" style="display: inline-block" videoid="#qm">
@@ -379,38 +393,27 @@ PRESS CTRL+SHIFT+R TO VIEW THE UPDATED PAGE. PAGE IS UNDER DEVELOPMENT. PLEASE C
     </div>
 </div>
 <iframe id="qm" class="qm_video"
-        width="720" height="345"
+        width="100%" height="345"
         src="https://www.youtube.com/embed/sEnTMgzw8ow?start=131&end=143&showinfo=0&controls=0&enablejsapi=1&disablekb=1"
         title="Queen Medley" frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen></iframe>
 </br>
-<p class="lead mb-0" align="justify">
-
-    In this example, we are trying to estimate the voice of the singer in the <b>center</b>.
-    It seems to be an example with only voices. However, like in the Disney Medley, this example contains
-    voices that mimic drum kit sounds along with the other singing voices.
-    As expected, our models do not single out a voice in the part which goes "the show must go on" since it is sung simultaeneously
-    by the center, left-middle and right-middle faces with almost the same lip motions.
-    Note that the audio-visual models enhance "the show must go on" part much better than the audio-only model (U-Net).
-    LLCP model attenuates the word "must" more than Y-Net. In Y-Net-m, all the voices (including the background vocals)
-    seem to be boosted just before the words "the show" (also visible in the spectrogram around t=3s).
-    Such an effect is not seen in Y-Net-r. Y-Net-r seems to be the best performing model here.
-    </br>
-
-</p>
 <div class="row">
-    <div class="col-lg-10" style="padding-bottom: 1em;display: flex">
-        <h5 style="padding-top: 1em;width: 40%">Estimates</h5>
-        <p style="padding-top: 1em">Mix</p>
-        <audio class="src4mixaudio"
-               src="../estimated_demo/sEnTMgzw8ow_2_11_to_2_33/mix_sEnTMgzw8ow_2_11_to_2_33.mp3"
-               controls=""></audio>
-    </div>
     <div class="border">
         <div style="display: flex">
             <div class="column" style="padding-left:0.9em;display: flex">
                 <div style="padding-top: 0.5em;display: flex">
+                    <div class="col-xs-1 excol3">
+                        <div class="src4_model">Mixture</div>
+                        <img class="spec"
+                             src="../estimated_demo/sEnTMgzw8ow_2_11_to_2_33/mix_sEnTMgzw8ow_2_11_to_2_33.png">
+                        <div class="col-xs-1 excol3">
+                            <audio class="src4audio"
+                                   src="../estimated_demo/sEnTMgzw8ow_2_11_to_2_33/mix_sEnTMgzw8ow_2_11_to_2_33.mp3"
+                                   controls=""></audio>
+                        </div>
+                    </div>
                     <div class="col-xs-1 excol3">
                         <div class="src4_model">U-Net</div>
                         <img class="spec"
@@ -456,7 +459,22 @@ PRESS CTRL+SHIFT+R TO VIEW THE UPDATED PAGE. PAGE IS UNDER DEVELOPMENT. PLEASE C
         </div>
     </div>
 </div>
+<p class="lead mb-0" align="justify">
+
+    In this example, we are trying to estimate the voice of the singer in the <b>center</b>.
+    It seems to be an example with only voices. However, like in the Disney Medley, this example contains
+    voices that mimic drum kit sounds along with the other singing voices.
+    As expected, our models do not single out a voice in the part which goes "the show must go on" since it is sung simultaeneously
+    by the center, left-middle and right-middle faces with almost the same lip motions.
+    Note that the audio-visual models enhance "the show must go on" part much better than the audio-only model (U-Net).
+    LLCP model attenuates the word "must" more than Y-Net. In Y-Net-m, all the voices (including the background vocals)
+    seem to be boosted just before the words "the show" (also visible in the spectrogram around t=3s).
+    Such an effect is not seen in Y-Net-r. Y-Net-r seems to be the best performing model here.
+    </br>
+
+</p>
 <p></p>
+</br></br>
 <div class="row">
     <h3 class="col-sm-4" style="display: inline-block">Bad Guy</h3>
     <div class="videoplay" style="display: inline-block" videoid="#bg">
@@ -467,30 +485,28 @@ PRESS CTRL+SHIFT+R TO VIEW THE UPDATED PAGE. PAGE IS UNDER DEVELOPMENT. PLEASE C
     </div>
 </div>
 <iframe id="bg" class="bg_video"
-        width="720" height="345"
+        width="100%" height="345"
         src="https://www.youtube.com/embed/pRh9rKd2j64?start=30&end=42&showinfo=0&controls=0&enablejsapi=1&disablekb=1"
         title="Bad Guy" frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen></iframe>
 </br>
-<p class="lead mb-0" align="justify">
-    This is an example of a mix containing single voice and background music. We notice that the audio-visual models
-    do not particularly improve upon the performance of the audio-only model U-Net. In general, unlike in mixes
-    containing multiple voices, we notice that the audio-visual models did not provide additional advantage over the
-    audio-only models in the case of examples with single voice and accompaniment.
-</p>
+
 <div class="row">
-    <div class="col-lg-10" style="padding-bottom: 1em;display: flex">
-        <h5 style="padding-top: 1em;width: 40%">Estimates</h5>
-        <p style="padding-top: 1em">Mix</p>
-        <audio class="src4mixaudio"
-               src="../estimated_demo/pRh9rKd2j64_0_15_to_0_55/mix_pRh9rKd2j64_0_15_to_0_55.mp3"
-               controls=""></audio>
-    </div>
     <div class="border">
         <div style="display: flex">
             <div class="column" style="padding-left:0.9em;display: flex">
                 <div style="padding-top: 0.5em;display: flex">
+                    <div class="col-xs-1 excol3">
+                        <div class="src4_model">Mixture</div>
+                        <img class="spec"
+                             src="../estimated_demo/pRh9rKd2j64_0_15_to_0_55/mix_pRh9rKd2j64_0_15_to_0_55.png">
+                        <div class="col-xs-1 excol3">
+                            <audio class="src4audio"
+                                   src="../estimated_demo/pRh9rKd2j64_0_15_to_0_55/mix_pRh9rKd2j64_0_15_to_0_55.mp3"
+                                   controls=""></audio>
+                        </div>
+                    </div>
                     <div class="col-xs-1 excol3">
                         <div class="src4_model">U-Net</div>
                         <img class="spec"
@@ -536,13 +552,22 @@ PRESS CTRL+SHIFT+R TO VIEW THE UPDATED PAGE. PAGE IS UNDER DEVELOPMENT. PLEASE C
         </div>
     </div>
 </div>
+<p class="lead mb-0" align="justify">
+    This is an example of a mix containing single voice and background music. We notice that the audio-visual models
+    do not particularly improve upon the performance of the audio-only model U-Net. In general, unlike in mixes
+    containing multiple voices, we notice that the audio-visual models did not provide additional advantage over the
+    audio-only models in the case of examples with single voice and accompaniment.
+</p>
+</br></br>
+
 <div class="row">
     <h3 class="col-sm-4" style="display: inline-block">References</h3>
 </div>
+
 <p class="lead mb-0" align="justify">
 
     [1] A. Ephrat, I. Mosseri, O. Lang, T. Dekel, K. Wilson, A. Hassidim, W. T. Freeman, and M. Rubinstein, “Looking to
-    listen at the cock- tail party: A speaker-independent audio-visual model for speech separation,” in SIGGRAPH, 2018.
+    listen at the cocktail party: A speaker-independent audio-visual model for speech separation,” in SIGGRAPH, 2018.
     </br>
 
 </p>
