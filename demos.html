@@ -34,7 +34,7 @@ PRESS CTRL+SHIFT+R TO VIEW THE UPDATED PAGE. PAGE IS UNDER DEVELOPMENT. PLEASE C
     This is an example with multiple voices and no instrumental accompaniment.
     Since our audio-visual models (Y-Net) rely on the lip motion to estimate a voice,
     we choose a segment in this video where the lip motions differ for various voices at some point.
-    In this example, the desired voice to separate is that of the top-right face.
+    In this example, the desired voice to separate is that of the <b>top-right</b> face.
     We show that our Y-Net outperforms the
     baseline models - the audio-only model U-Net and LLCP (Looking to listen at the cocktail party[1] model).
     Listen carefully to the part where it goes "Isn't she pretty".
@@ -42,7 +42,6 @@ PRESS CTRL+SHIFT+R TO VIEW THE UPDATED PAGE. PAGE IS UNDER DEVELOPMENT. PLEASE C
     It is a particularly challenging mixture since all the voices are
     performed by the same singer.</br>
 </p>
-TOP RIGHT VOICE:</br>
 <div class="row">
     <div class="col-lg-10" style="padding-bottom: 1em;display: flex">
         <h5 style="padding-top: 1em;width: 40%">Estimates</h5>
@@ -121,7 +120,7 @@ TOP RIGHT VOICE:</br>
 <p class="lead mb-0" align="justify">
 
     Here, we show another segment from the same video as in the previous example.
-    But, here, we estimate the voice sung by the bottom-left face which is not a lead voice.
+    But, here, we estimate the voice sung by the <b>bottom-left</b> face which is not a lead voice.
     The bottom-left face is singing something that is not lyrical. We chose this segment for this demo
     because in the previous one, the accompaniment voices were making the same lip movements as the main voice.
     None of the models were trained to separate a non-lyrical voice like this, but our Y-Net outperforms the other
@@ -131,7 +130,6 @@ TOP RIGHT VOICE:</br>
 
 </p>
 
-BOTTOM LEFT VOICE:</br>
 <div class="row">
     <div class="col-lg-10" style="padding-bottom: 1em;display: flex">
         <h5 style="padding-top: 1em;width: 40%">Estimates</h5>
@@ -210,7 +208,7 @@ BOTTOM LEFT VOICE:</br>
 <p class="lead mb-0" align="justify">
     This is an example with multiple singing voices of the same singer along with the background music.
     It is more challenging than the previous examples because of the presence of background music in addition to
-    the voices. We are trying to estimate the center singer's voice.
+    the voices. We are trying to estimate the <b>center</b> singer's voice.
     Our models (Y-Net) estimate this voice better than the baseline models in the sense that the target singer
     voice is enhanced the most in Y-Net.
 </p>
@@ -292,7 +290,7 @@ BOTTOM LEFT VOICE:</br>
 <p class="lead mb-0" align="justify">
     In this example, there seem to be only voices without instrumental accompaniment. However, there are voices
     which are trying to mimic instruments. For example, there is a beatboxing voice which mimics drum kit sounds
-    like kicks and snares. We are interested in estimating the voice of the singer in the center.
+    like kicks and snares. We are interested in estimating the voice of the singer in the <b>center</b>.
     The estimate of the audio-only model U-Net sounds attenuated in the region around the words "in perfect".
     The other audio-visual models do not have this problem. The beatboxing voice is suppressed better in our Y-Net
     estimates than in the LLCP estimate: for example, the snare drum sound that appears around the word "for"
@@ -376,7 +374,9 @@ BOTTOM LEFT VOICE:</br>
 </br>
 <p class="lead mb-0" align="justify">
 
-    In this example, we are trying to estimate the voice of the singer in the center.
+    In this example, we are trying to estimate the voice of the singer in the <b>center</b>.
+    It seems to be an example with only voices. However, like in the Disney Medley, this example contains
+    voices that mimic drum kit sounds along with the other singing voices.
     As expected, our models do not single out a voice in the part which goes "the show must go on" since it is sung simultaeneously
     by the center, left-middle and right-middle faces with almost the same lip motions.
     Note that the audio-visual models enhance "the show must go on" part much better than the audio-only model (U-Net).
