@@ -596,6 +596,503 @@ PRESS CTRL+SHIFT+R TO VIEW THE UPDATED PAGE. PAGE IS UNDER DEVELOPMENT. PLEASE C
 </p>
 </br></br>
 
+
+<h2>Artifical Mixtures (Test Set)</h2>
+<p class="lead mb-0" align="justify">
+    The artificial mixtures are created by randomly mixing a
+    singing voice with another singing voice along with an accompaniment.
+    The two singing voices are a part of our dataset Acappella.
+    The accompaniment is an audio segment randomly sampled from a subset of
+    AudioSet.
+    The mixing is random in the sense that
+    we do not put any constraints regarding the musical appropriateness
+    or aesthetics in the mixing criteria.
+    Hence, the resulting
+    mixtures may not sound like that of a professional music video.
+    We do this so as to report metrics on the singing voice separation quality,
+    which are possible in this case because we have the ground-truth sources
+    (individual singing voice) unlike in the real world examples we saw earlier.
+    Here, we show some results on estimating the desired target voice
+    in such artificial mixtures.
+    Again, note that none of these singers were a part of the training set.
+</p>
+</br>
+<!--Examples for artificial mixes:
+English Unseen Mixed Gender:
+000it_000049_el03, 483/500
+000it_000024_el09, 239/500
+Unknown Language Mixed Gender:
+000it_000034_el04 334/500
+000it_000034_el05 335/500
+000it_000029_el05 285/500 -->
+<div class="row" style="padding-bottom: 1em">
+    <div class="column" style="padding-left: 1em; padding-right: 1em">
+        <h4>Unseen English Mix (Sample 1)</h4>
+    </div>
+    <div class="column" style="padding-left: 1em">
+        <div class="videoplay" videoid="#emr1">
+            <button type="button" class="btn btn-outline-primary">Play</button>
+        </div>
+    </div>
+    <div class="column">
+        <div class="col-sm-3 videostop" videoid="#emr1">
+            <button type="button" class="btn btn-outline-primary">Stop</button>
+        </div>
+    </div>
+</div>
+<iframe id="emr1" class="emr1_video"
+        width="100%" height="345"
+        src="https://www.youtube.com/embed/dBEUX9fP584?start=29&end=33&showinfo=0&controls=0&enablejsapi=1&disablekb=1"
+        title="Fly Me To The Moon" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+</br>
+<div class="row">
+    <div class="border">
+        <div style="display: flex">
+            <div class="column" style="padding-left:0.9em;display: flex">
+                <div style="padding-top: 0.5em;display: flex">
+                    <div class="col-xs-1 excol3">
+                        <div class="src4_model">Mixture</div>
+                        <img class="spec"
+                             src="../estimated_demo/emr/000it_000049_el03/mix.png">
+                        <div class="col-xs-1 excol3">
+                            <audio class="src4audio"
+                                   src="../estimated_demo/emr/000it_000049_el03/mix.mp3"
+                                   controls=""></audio>
+                        </div>
+                    </div>
+                    <div class="col-xs-1 excol3">
+                        <div class="src4_model">Groundtruth</div>
+                        <img class="spec"
+                             src="../estimated_demo/emr/000it_000049_el03/gt.png">
+                        <div class="col-xs-1 excol3">
+                            <audio class="src4audio"
+                                   src="../estimated_demo/emr/000it_000049_el03/gt.mp3"
+                                   controls=""></audio>
+                        </div>
+                    </div>
+                    <div class="col-xs-1 excol3">
+                        <div style="padding-left: 35px">Accompaniment</div>
+                        <img class="spec"
+                             src="../estimated_demo/emr/000it_000049_el03/accompaniment.png">
+                        <div class="col-xs-1 excol3">
+                            <audio class="src4audio"
+                                   src="../estimated_demo/emr/000it_000049_el03/accompaniment.mp3"
+                                   controls=""></audio>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div style="display: flex">
+            <div class="column" style="padding-left:0.9em;display: flex">
+                <div style="padding-top: 0.5em;display: flex">
+                    <div class="col-xs-1 excol3">
+                        <div class="src4_model">U-Net</div>
+                        <img class="spec"
+                             src="../estimated_demo/emr/000it_000049_el03/ao.png">
+                        <div class="col-xs-1 excol3">
+                            <audio class="src4audio"
+                                   src="../estimated_demo/emr/000it_000049_el03/ao.mp3"
+                                   controls=""></audio>
+                        </div>
+                    </div>
+                    <div class="col-xs-1 excol3">
+                        <div style="padding-left: 35px">LLCP</div>
+                        <img class="spec"
+                             src="../estimated_demo/emr/000it_000049_el03/llcp.png">
+                        <div class="col-xs-1 excol3">
+                            <audio class="src4audio"
+                                   src="../estimated_demo/emr/000it_000049_el03/llcp.mp3"
+                                   controls=""></audio>
+                        </div>
+                    </div>
+                    <div class="col-xs-1 excol3">
+                        <div style="padding-left: 65px">Y-Net-m</div>
+                        <img class="spec"
+                             src="../estimated_demo/emr/000it_000049_el03/ynet-m.png">
+                        <div class="col-xs-1 excol3">
+                            <audio class="src4audio"
+                                   src="../estimated_demo/emr/000it_000049_el03/ynet-m.mp3"
+                                   controls=""></audio>
+                        </div>
+                    </div>
+                    <div class="col-xs-1 excol3">
+                        <div style="padding-left: 80px">Y-Net-r</div>
+                        <img class="spec"
+                             src="../estimated_demo/emr/000it_000049_el03/ynet-r.png">
+                        <div class="col-xs-1 excol3">
+                            <audio class="src4audio"
+                                   src="../estimated_demo/emr/000it_000049_el03/ynet-r.mp3"
+                                   controls=""></audio>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<p class="lead mb-0" align="justify">
+    Write-up in progress</br>
+</p>
+<p></p>
+</br></br>
+<div class="row" style="padding-bottom: 1em">
+    <div class="column" style="padding-left: 1em; padding-right: 1em">
+        <h4>Unseen English Mix (Sample 2)</h4>
+    </div>
+    <div class="column" style="padding-left: 1em">
+        <div class="videoplay" videoid="#emr2">
+            <button type="button" class="btn btn-outline-primary">Play</button>
+        </div>
+    </div>
+    <div class="column">
+        <div class="col-sm-3 videostop" videoid="#emr2">
+            <button type="button" class="btn btn-outline-primary">Stop</button>
+        </div>
+    </div>
+</div>
+<iframe id="emr2" class="emr2_video"
+        width="100%" height="345"
+        src="https://www.youtube.com/embed/vj6vnqlMqB4?start=101&end=105&showinfo=0&controls=0&enablejsapi=1&disablekb=1"
+        title="Amazing Grace" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+</br>
+<div class="row">
+    <div class="border">
+        <div style="display: flex">
+            <div class="column" style="padding-left:0.9em;display: flex">
+                <div style="padding-top: 0.5em;display: flex">
+                    <div class="col-xs-1 excol3">
+                        <div class="src4_model">Mixture</div>
+                        <img class="spec"
+                             src="../estimated_demo/emr/000it_000024_el09/mix.png">
+                        <div class="col-xs-1 excol3">
+                            <audio class="src4audio"
+                                   src="../estimated_demo/emr/000it_000024_el09/mix.mp3"
+                                   controls=""></audio>
+                        </div>
+                    </div>
+                    <div class="col-xs-1 excol3">
+                        <div class="src4_model">Groundtruth</div>
+                        <img class="spec"
+                             src="../estimated_demo/emr/000it_000024_el09/gt.png">
+                        <div class="col-xs-1 excol3">
+                            <audio class="src4audio"
+                                   src="../estimated_demo/emr/000it_000024_el09/gt.mp3"
+                                   controls=""></audio>
+                        </div>
+                    </div>
+                    <div class="col-xs-1 excol3">
+                        <div style="padding-left: 35px">Accompaniment</div>
+                        <img class="spec"
+                             src="../estimated_demo/emr/000it_000024_el09/accompaniment.png">
+                        <div class="col-xs-1 excol3">
+                            <audio class="src4audio"
+                                   src="../estimated_demo/emr/000it_000024_el09/accompaniment.mp3"
+                                   controls=""></audio>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div style="display: flex">
+            <div class="column" style="padding-left:0.9em;display: flex">
+                <div style="padding-top: 0.5em;display: flex">
+                    <div class="col-xs-1 excol3">
+                        <div class="src4_model">U-Net</div>
+                        <img class="spec"
+                             src="../estimated_demo/emr/000it_000024_el09/ao.png">
+                        <div class="col-xs-1 excol3">
+                            <audio class="src4audio"
+                                   src="../estimated_demo/emr/000it_000024_el09/ao.mp3"
+                                   controls=""></audio>
+                        </div>
+                    </div>
+                    <div class="col-xs-1 excol3">
+                        <div style="padding-left: 35px">LLCP</div>
+                        <img class="spec"
+                             src="../estimated_demo/emr/000it_000024_el09/llcp.png">
+                        <div class="col-xs-1 excol3">
+                            <audio class="src4audio"
+                                   src="../estimated_demo/emr/000it_000024_el09/llcp.mp3"
+                                   controls=""></audio>
+                        </div>
+                    </div>
+                    <div class="col-xs-1 excol3">
+                        <div style="padding-left: 65px">Y-Net-m</div>
+                        <img class="spec"
+                             src="../estimated_demo/emr/000it_000024_el09/ynet-m.png">
+                        <div class="col-xs-1 excol3">
+                            <audio class="src4audio"
+                                   src="../estimated_demo/emr/000it_000024_el09/ynet-m.mp3"
+                                   controls=""></audio>
+                        </div>
+                    </div>
+                    <div class="col-xs-1 excol3">
+                        <div style="padding-left: 80px">Y-Net-r</div>
+                        <img class="spec"
+                             src="../estimated_demo/emr/000it_000024_el09/ynet-r.png">
+                        <div class="col-xs-1 excol3">
+                            <audio class="src4audio"
+                                   src="../estimated_demo/emr/000it_000024_el09/ynet-r.mp3"
+                                   controls=""></audio>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<p class="lead mb-0" align="justify">
+    Write-up in progress.</br>
+</p>
+<p></p>
+</br></br>
+<div class="row" style="padding-bottom: 1em">
+    <div class="column" style="padding-left: 1em; padding-right: 1em">
+        <h4>Unseen Language Mix (Sample 1)</h4>
+    </div>
+    <div class="column" style="padding-left: 1em">
+        <div class="videoplay" videoid="#omr1">
+            <button type="button" class="btn btn-outline-primary">Play</button>
+        </div>
+    </div>
+    <div class="column">
+        <div class="col-sm-3 videostop" videoid="#omr1">
+            <button type="button" class="btn btn-outline-primary">Stop</button>
+        </div>
+    </div>
+</div>
+<iframe id="omr1" class="omr1_video"
+        width="100%" height="345"
+        src="https://www.youtube.com/embed/S1rbuHpQtZc?start=80&end=84&showinfo=0&controls=0&enablejsapi=1&disablekb=1"
+        title="Munbe Va (Tamil Song)" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+</br>
+<div class="row">
+    <div class="border">
+        <div style="display: flex">
+            <div class="column" style="padding-left:0.9em;display: flex">
+                <div style="padding-top: 0.5em;display: flex">
+                    <div class="col-xs-1 excol3">
+                        <div class="src4_model">Mixture</div>
+                        <img class="spec"
+                             src="../estimated_demo/omr/000it_000034_el04/mix.png">
+                        <div class="col-xs-1 excol3">
+                            <audio class="src4audio"
+                                   src="../estimated_demo/omr/000it_000034_el04/mix.mp3"
+                                   controls=""></audio>
+                        </div>
+                    </div>
+                    <div class="col-xs-1 excol3">
+                        <div class="src4_model">Groundtruth</div>
+                        <img class="spec"
+                             src="../estimated_demo/omr/000it_000034_el04/gt.png">
+                        <div class="col-xs-1 excol3">
+                            <audio class="src4audio"
+                                   src="../estimated_demo/omr/000it_000034_el04/gt.mp3"
+                                   controls=""></audio>
+                        </div>
+                    </div>
+                    <div class="col-xs-1 excol3">
+                        <div style="padding-left: 35px">Accompaniment</div>
+                        <img class="spec"
+                             src="../estimated_demo/omr/000it_000034_el04/accompaniment.png">
+                        <div class="col-xs-1 excol3">
+                            <audio class="src4audio"
+                                   src="../estimated_demo/omr/000it_000034_el04/accompaniment.mp3"
+                                   controls=""></audio>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="display: flex">
+            <div class="column" style="padding-left:0.9em;display: flex">
+                <div style="padding-top: 0.5em;display: flex">
+                    <div class="col-xs-1 excol3">
+                        <div class="src4_model">U-Net</div>
+                        <img class="spec"
+                             src="../estimated_demo/omr/000it_000034_el04/ao.png">
+                        <div class="col-xs-1 excol3">
+                            <audio class="src4audio"
+                                   src="../estimated_demo/omr/000it_000034_el04/ao.mp3"
+                                   controls=""></audio>
+                        </div>
+                    </div>
+                    <div class="col-xs-1 excol3">
+                        <div style="padding-left: 35px">LLCP</div>
+                        <img class="spec"
+                             src="../estimated_demo/omr/000it_000034_el04/llcp.png">
+                        <div class="col-xs-1 excol3">
+                            <audio class="src4audio"
+                                   src="../estimated_demo/omr/000it_000034_el04/llcp.mp3"
+                                   controls=""></audio>
+                        </div>
+                    </div>
+                    <div class="col-xs-1 excol3">
+                        <div style="padding-left: 65px">Y-Net-m</div>
+                        <img class="spec"
+                             src="../estimated_demo/omr/000it_000034_el04/ynet-m.png">
+                        <div class="col-xs-1 excol3">
+                            <audio class="src4audio"
+                                   src="../estimated_demo/omr/000it_000034_el04/ynet-m.mp3"
+                                   controls=""></audio>
+                        </div>
+                    </div>
+                    <div class="col-xs-1 excol3">
+                        <div style="padding-left: 80px">Y-Net-r</div>
+                        <img class="spec"
+                             src="../estimated_demo/omr/000it_000034_el04/ynet-r.png">
+                        <div class="col-xs-1 excol3">
+                            <audio class="src4audio"
+                                   src="../estimated_demo/omr/000it_000034_el04/ynet-r.mp3"
+                                   controls=""></audio>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<p class="lead mb-0" align="justify">
+    Write-up in progress.</br>
+</p>
+<p></p>
+</br></br>
+
+<div class="row" style="padding-bottom: 1em">
+    <div class="column" style="padding-left: 1em; padding-right: 1em">
+        <h4>Unseen Language Mix (Sample 2)</h4>
+    </div>
+    <div class="column" style="padding-left: 1em">
+        <div class="videoplay" videoid="#omr2">
+            <button type="button" class="btn btn-outline-primary">Play</button>
+        </div>
+    </div>
+    <div class="column">
+        <div class="col-sm-3 videostop" videoid="#omr2">
+            <button type="button" class="btn btn-outline-primary">Stop</button>
+        </div>
+    </div>
+</div>
+<iframe id="omr2" class="omr2_video"
+        width="100%" height="345"
+        src="https://www.youtube.com/embed/hWPUwEeXtN8?start=47&end=51&showinfo=0&controls=0&enablejsapi=1&disablekb=1"
+        title="Greek Song" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+</br>
+<div class="row">
+    <div class="border">
+        <div style="display: flex">
+            <div class="column" style="padding-left:0.9em;display: flex">
+                <div style="padding-top: 0.5em;display: flex">
+                    <div class="col-xs-1 excol3">
+                        <div class="src4_model">Mixture</div>
+                        <img class="spec"
+                             src="../estimated_demo/omr/000it_000029_el05/mix.png">
+                        <div class="col-xs-1 excol3">
+                            <audio class="src4audio"
+                                   src="../estimated_demo/omr/000it_000029_el05/mix.mp3"
+                                   controls=""></audio>
+                        </div>
+                    </div>
+                    <div class="col-xs-1 excol3">
+                        <div class="src4_model">Groundtruth</div>
+                        <img class="spec"
+                             src="../estimated_demo/omr/000it_000029_el05/gt.png">
+                        <div class="col-xs-1 excol3">
+                            <audio class="src4audio"
+                                   src="../estimated_demo/omr/000it_000029_el05/gt.mp3"
+                                   controls=""></audio>
+                        </div>
+                    </div>
+                    <div class="col-xs-1 excol3">
+                        <div style="padding-left: 35px">Accompaniment</div>
+                        <img class="spec"
+                             src="../estimated_demo/omr/000it_000029_el05/accompaniment.png">
+                        <div class="col-xs-1 excol3">
+                            <audio class="src4audio"
+                                   src="../estimated_demo/omr/000it_000029_el05/accompaniment.mp3"
+                                   controls=""></audio>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="display: flex">
+            <div class="column" style="padding-left:0.9em;display: flex">
+                <div style="padding-top: 0.5em;display: flex">
+                    <div class="col-xs-1 excol3">
+                        <div class="src4_model">Mixture</div>
+                        <img class="spec"
+                             src="../estimated_demo/omr/000it_000029_el05/mix.png">
+                        <div class="col-xs-1 excol3">
+                            <audio class="src4audio"
+                                   src="../estimated_demo/omr/000it_000029_el05/mix.mp3"
+                                   controls=""></audio>
+                        </div>
+                    </div>
+                    <div class="col-xs-1 excol3">
+                        <div class="src4_model">U-Net</div>
+                        <img class="spec"
+                             src="../estimated_demo/omr/000it_000029_el05/ao.png">
+                        <div class="col-xs-1 excol3">
+                            <audio class="src4audio"
+                                   src="../estimated_demo/omr/000it_000029_el05/ao.mp3"
+                                   controls=""></audio>
+                        </div>
+                    </div>
+                    <div class="col-xs-1 excol3">
+                        <div style="padding-left: 35px">LLCP</div>
+                        <img class="spec"
+                             src="../estimated_demo/omr/000it_000029_el05/llcp.png">
+                        <div class="col-xs-1 excol3">
+                            <audio class="src4audio"
+                                   src="../estimated_demo/omr/000it_000029_el05/llcp.mp3"
+                                   controls=""></audio>
+                        </div>
+                    </div>
+                    <div class="col-xs-1 excol3">
+                        <div style="padding-left: 65px">Y-Net-m</div>
+                        <img class="spec"
+                             src="../estimated_demo/omr/000it_000029_el05/ynet-m.png">
+                        <div class="col-xs-1 excol3">
+                            <audio class="src4audio"
+                                   src="../estimated_demo/omr/000it_000029_el05/ynet-m.mp3"
+                                   controls=""></audio>
+                        </div>
+                    </div>
+                    <div class="col-xs-1 excol3">
+                        <div style="padding-left: 80px">Y-Net-r</div>
+                        <img class="spec"
+                             src="../estimated_demo/omr/000it_000029_el05/ynet-r.png">
+                        <div class="col-xs-1 excol3">
+                            <audio class="src4audio"
+                                   src="../estimated_demo/omr/000it_000029_el05/ynet-r.mp3"
+                                   controls=""></audio>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<p class="lead mb-0" align="justify">
+    Write-up in progress.</br>
+</p>
+<p></p>
+</br></br>
+
+
+
 <div class="row">
     <h3 class="col-sm-4" style="display: inline-block">References</h3>
 </div>
