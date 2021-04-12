@@ -81,6 +81,12 @@ header.masthead {
     padding-bottom: 1em
 }
 
+.estimlabel{
+    margin: auto;
+    text-align: center;
+    padding-right: 2%;
+}
+
 @media (max-width: 600px) {
     .border{
         border: solid;

@@ -2,7 +2,7 @@
 layout: page
 ---
 
-PRESS CTRL+SHIFT+R TO VIEW THE UPDATED PAGE. PAGE IS UNDER DEVELOPMENT. PLEASE CHECK AGAIN AFTER 09-APRIL-2021.
+PRESS CTRL+SHIFT+R TO VIEW THE UPDATED PAGE.
 
 <p class="lead mb-0" align="justify">
     Dear reader, the YouTube videos will start in the segment of interest. The only way to control the video is through
@@ -596,6 +596,249 @@ PRESS CTRL+SHIFT+R TO VIEW THE UPDATED PAGE. PAGE IS UNDER DEVELOPMENT. PLEASE C
 </p>
 </br></br>
 
+<h2>Our Multi-voice Montage</h2>
+<p class="lead mb-0" align="justify">
+    The videos from YouTube that we saw earlier do not provide the original isolated voices.
+    For this reason, we could only qualitatively evaluate the performance
+    of target voice separation models on such videos. To be able to evaluate quantitatively,
+    we recorded a multi-voice montage with an amateur singer so that we can use the
+    individual voices as ground truth during evaluation. It is a montage with six voices and an
+    accompaniment track. The song being performed is "The Circle of Life", a popular soundtrack
+    from the movie "The Lion King". Apart from English, the song lyrics also contains Swahili:
+    a language that was not a part of the training set.
+    Also, this singer was not a part of the training set.
+    Below are the estimates for the voices: <b>Rafiki (bottom-center)</b>,
+    <b>Leones (bottom-left)</b> and <b>Backing Vocals (top-left)</b>.
+    See the right column in Table 1 of the paper for the quantitative metrics.
+</p>
+</br>
+<div class="row" style="padding-bottom: 1em">
+    <div class="column" style="padding-left: 1em; padding-right: 1em">
+        <h4>The Circle Of Life</h4>
+    </div>
+    <div class="column" style="padding-left: 1em">
+        <div class="videoplay" videoid="#tcol">
+            <button type="button" class="btn btn-outline-primary">Play</button>
+        </div>
+    </div>
+    <div class="column">
+        <div class="col-sm-3 videostop" videoid="#tcol">
+            <button type="button" class="btn btn-outline-primary">Stop</button>
+        </div>
+    </div>
+</div>
+<iframe id="tcol" class="tcol_video"
+        width="100%" height="345"
+        src="https://www.youtube.com/embed/XvBOH8FGias?start=175&end=187&showinfo=0&controls=0&enablejsapi=1&disablekb=1"
+        title="The circle of life" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+</br>
+<div class="row">
+    <div class="border">
+        <div style="display: flex">
+            <div class="column" style="padding-left:0.9em;display: flex">
+                <div style="padding-top: 0.5em;display: flex">
+                    <div class="col-xs-1 excol3">
+                        <div class="src4_model">Mixture</div>
+                        <img class="spec"
+                             src="../estimated_demo/tcol/mix.png">
+                        <div class="col-xs-1 excol3">
+                            <audio class="src4audio"
+                                   src="../estimated_demo/tcol/mix.mp3"
+                                   controls=""></audio>
+                        </div>
+                    </div>
+                    <div class="col-xs-1 excol3">
+                        <div class="src4_model">Ground truth Rafiki</div>
+                        <img class="spec"
+                             src="../estimated_demo/tcol/gt_rafiki.png">
+                        <div class="col-xs-1 excol3">
+                            <audio class="src4audio"
+                                   src="../estimated_demo/tcol/gt_rafiki.mp3"
+                                   controls=""></audio>
+                        </div>
+                    </div>
+                    <div class="col-xs-1 excol3">
+                        <div class="src4_model">Ground truth Leones</div>
+                        <img class="spec"
+                             src="../estimated_demo/tcol/gt_leones.png">
+                        <div class="col-xs-1 excol3">
+                            <audio class="src4audio"
+                                   src="../estimated_demo/tcol/gt_leones.mp3"
+                                   controls=""></audio>
+                        </div>
+                    </div>
+                    <div class="col-xs-1 excol3">
+                        <div style="padding-left: 35px">Ground truth Backing Vocals</div>
+                        <img class="spec"
+                             src="../estimated_demo/tcol/gt_backtrack.png">
+                        <div class="col-xs-1 excol3">
+                            <audio class="src4audio"
+                                   src="../estimated_demo/tcol/gt_backtrack.mp3"
+                                   controls=""></audio>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div style="display: flex">
+            <div class="column" style="padding-left:0.9em;display: flex">
+                <div style="padding-top: 0.5em;display: flex">
+                    <div class="estimlabel">
+                        Rafiki Estimates
+                    </div>
+                    <div class="col-xs-1 excol3">
+                        <div class="src4_model">U-Net</div>
+                        <img class="spec"
+                             src="../estimated_demo/tcol/rafiki_ao.png">
+                        <div class="col-xs-1 excol3">
+                            <audio class="src4audio"
+                                   src="../estimated_demo/tcol/rafiki_ao.mp3"
+                                   controls=""></audio>
+                        </div>
+                    </div>
+                    <div class="col-xs-1 excol3">
+                        <div style="padding-left: 35px">LLCP</div>
+                        <img class="spec"
+                             src="../estimated_demo/tcol/rafiki_llcp.png">
+                        <div class="col-xs-1 excol3">
+                            <audio class="src4audio"
+                                   src="../estimated_demo/tcol/rafiki_llcp.mp3"
+                                   controls=""></audio>
+                        </div>
+                    </div>
+                    <div class="col-xs-1 excol3">
+                        <div style="padding-left: 65px">Y-Net-m</div>
+                        <img class="spec"
+                             src="../estimated_demo/tcol/rafiki_ynetm.png">
+                        <div class="col-xs-1 excol3">
+                            <audio class="src4audio"
+                                   src="../estimated_demo/tcol/rafiki_ynetm.mp3"
+                                   controls=""></audio>
+                        </div>
+                    </div>
+                    <div class="col-xs-1 excol3">
+                        <div style="padding-left: 80px">Y-Net-r</div>
+                        <img class="spec"
+                             src="../estimated_demo/tcol/rafiki_ynetr.png">
+                        <div class="col-xs-1 excol3">
+                            <audio class="src4audio"
+                                   src="../estimated_demo/tcol/rafiki_ynetr.mp3"
+                                   controls=""></audio>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div style="display: flex">
+            <div class="column" style="padding-left:0.9em;display: flex">
+                <div style="padding-top: 0.5em;display: flex">
+                    <div class="estimlabel">
+                        Leones Estimates
+                    </div>
+                    <div class="col-xs-1 excol3">
+                        <div class="src4_model">U-Net</div>
+                        <img class="spec"
+                             src="../estimated_demo/tcol/leones_ao.png">
+                        <div class="col-xs-1 excol3">
+                            <audio class="src4audio"
+                                   src="../estimated_demo/tcol/leones_ao.mp3"
+                                   controls=""></audio>
+                        </div>
+                    </div>
+                    <div class="col-xs-1 excol3">
+                        <div class="src4_model">LLCP</div>
+                        <img class="spec"
+                             src="../estimated_demo/tcol/leones_llcp.png">
+                        <div class="col-xs-1 excol3">
+                            <audio class="src4audio"
+                                   src="../estimated_demo/tcol/leones_llcp.mp3"
+                                   controls=""></audio>
+                        </div>
+                    </div>
+                    <div class="col-xs-1 excol3">
+                        <div class="src4_model">Y-Net-m</div>
+                        <img class="spec"
+                             src="../estimated_demo/tcol/leones_ynetm.png">
+                        <div class="col-xs-1 excol3">
+                            <audio class="src4audio"
+                                   src="../estimated_demo/tcol/leones_ynetm.mp3"
+                                   controls=""></audio>
+                        </div>
+                    </div>
+                    <div class="col-xs-1 excol3">
+                        <div class="src4_model">Y-Net-r</div>
+                        <img class="spec"
+                             src="../estimated_demo/tcol/leones_ynetr.png">
+                        <div class="col-xs-1 excol3">
+                            <audio class="src4audio"
+                                   src="../estimated_demo/tcol/leones_ynetr.mp3"
+                                   controls=""></audio>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div style="display: flex">
+            <div class="column" style="padding-left:0.9em;display: flex">
+                <div style="padding-top: 0.5em;display: flex">
+                    <div class="estimlabel">
+                        Backing Vocals Estimates
+                    </div>
+                    <div class="col-xs-1 excol3">
+                        <div class="src4_model">U-Net</div>
+                        <img class="spec"
+                             src="../estimated_demo/tcol/backtrack_ao.png">
+                        <div class="col-xs-1 excol3">
+                            <audio class="src4audio"
+                                   src="../estimated_demo/tcol/backtrack_ao.mp3"
+                                   controls=""></audio>
+                        </div>
+                    </div>
+                    <div class="col-xs-1 excol3">
+                        <div class="src4_model">LLCP</div>
+                        <img class="spec"
+                             src="../estimated_demo/tcol/backtrack_llcp.png">
+                        <div class="col-xs-1 excol3">
+                            <audio class="src4audio"
+                                   src="../estimated_demo/tcol/backtrack_llcp.mp3"
+                                   controls=""></audio>
+                        </div>
+                    </div>
+                    <div class="col-xs-1 excol3">
+                        <div class="src4_model">Y-Net-m</div>
+                        <img class="spec"
+                             src="../estimated_demo/tcol/backtrack_ynetm.png">
+                        <div class="col-xs-1 excol3">
+                            <audio class="src4audio"
+                                   src="../estimated_demo/tcol/backtrack_ynetm.mp3"
+                                   controls=""></audio>
+                        </div>
+                    </div>
+                    <div class="col-xs-1 excol3">
+                        <div class="src4_model">Y-Net-r</div>
+                        <img class="spec"
+                             src="../estimated_demo/tcol/backtrack_ynetr.png">
+                        <div class="col-xs-1 excol3">
+                            <audio class="src4audio"
+                                   src="../estimated_demo/tcol/backtrack_ynetr.mp3"
+                                   controls=""></audio>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<p class="lead mb-0" align="justify">
+
+</p>
+<p></p>
+</br></br>
 
 <h2>Artificial Mixtures (Test Set)</h2>
 <p class="lead mb-0" align="justify">
@@ -614,6 +857,7 @@ PRESS CTRL+SHIFT+R TO VIEW THE UPDATED PAGE. PAGE IS UNDER DEVELOPMENT. PLEASE C
     (individual singing voice) unlike in the real world examples we saw earlier.
     Here, we show some results on estimating the desired target voice
     in such artificial mixtures.
+    For brevity, we only show the singing face of the target voice in the examples below.
     Again, note that none of these singers were a part of the training set.
 </p>
 </br>
@@ -663,12 +907,22 @@ Unknown Language Mixed Gender:
                         </div>
                     </div>
                     <div class="col-xs-1 excol3">
-                        <div class="src4_model">Groundtruth</div>
+                        <div class="src4_model">Target Voice</div>
                         <img class="spec"
                              src="../estimated_demo/emr/000it_000049_el03/gt.png">
                         <div class="col-xs-1 excol3">
                             <audio class="src4audio"
                                    src="../estimated_demo/emr/000it_000049_el03/gt.mp3"
+                                   controls=""></audio>
+                        </div>
+                    </div>
+                    <div class="col-xs-1 excol3">
+                        <div class="src4_model">Other Voice</div>
+                        <img class="spec"
+                             src="../estimated_demo/emr/000it_000049_el03/other.png">
+                        <div class="col-xs-1 excol3">
+                            <audio class="src4audio"
+                                   src="../estimated_demo/emr/000it_000049_el03/other.mp3"
                                    controls=""></audio>
                         </div>
                     </div>
@@ -689,6 +943,9 @@ Unknown Language Mixed Gender:
         <div style="display: flex">
             <div class="column" style="padding-left:0.9em;display: flex">
                 <div style="padding-top: 0.5em;display: flex">
+                    <div class="estimlabel">
+                        Target Voice Estimates
+                    </div>
                     <div class="col-xs-1 excol3">
                         <div class="src4_model">U-Net</div>
                         <img class="spec"
@@ -776,12 +1033,22 @@ Unknown Language Mixed Gender:
                         </div>
                     </div>
                     <div class="col-xs-1 excol3">
-                        <div class="src4_model">Groundtruth</div>
+                        <div class="src4_model">Target Voice</div>
                         <img class="spec"
                              src="../estimated_demo/emr/000it_000024_el09/gt.png">
                         <div class="col-xs-1 excol3">
                             <audio class="src4audio"
                                    src="../estimated_demo/emr/000it_000024_el09/gt.mp3"
+                                   controls=""></audio>
+                        </div>
+                    </div>
+                    <div class="col-xs-1 excol3">
+                        <div class="src4_model">Other Voice</div>
+                        <img class="spec"
+                             src="../estimated_demo/emr/000it_000024_el09/other.png">
+                        <div class="col-xs-1 excol3">
+                            <audio class="src4audio"
+                                   src="../estimated_demo/emr/000it_000024_el09/other.mp3"
                                    controls=""></audio>
                         </div>
                     </div>
@@ -802,6 +1069,9 @@ Unknown Language Mixed Gender:
         <div style="display: flex">
             <div class="column" style="padding-left:0.9em;display: flex">
                 <div style="padding-top: 0.5em;display: flex">
+                    <div class="estimlabel">
+                        Target Voice Estimates
+                    </div>
                     <div class="col-xs-1 excol3">
                         <div class="src4_model">U-Net</div>
                         <img class="spec"
@@ -889,12 +1159,22 @@ Unknown Language Mixed Gender:
                         </div>
                     </div>
                     <div class="col-xs-1 excol3">
-                        <div class="src4_model">Groundtruth</div>
+                        <div class="src4_model">Target Voice</div>
                         <img class="spec"
                              src="../estimated_demo/omr/000it_000034_el04/gt.png">
                         <div class="col-xs-1 excol3">
                             <audio class="src4audio"
                                    src="../estimated_demo/omr/000it_000034_el04/gt.mp3"
+                                   controls=""></audio>
+                        </div>
+                    </div>
+                    <div class="col-xs-1 excol3">
+                        <div class="src4_model">Other Voice</div>
+                        <img class="spec"
+                             src="../estimated_demo/omr/000it_000034_el04/other.png">
+                        <div class="col-xs-1 excol3">
+                            <audio class="src4audio"
+                                   src="../estimated_demo/omr/000it_000034_el04/other.mp3"
                                    controls=""></audio>
                         </div>
                     </div>
@@ -914,6 +1194,9 @@ Unknown Language Mixed Gender:
         <div style="display: flex">
             <div class="column" style="padding-left:0.9em;display: flex">
                 <div style="padding-top: 0.5em;display: flex">
+                    <div class="estimlabel">
+                        Target Voice Estimates
+                    </div>
                     <div class="col-xs-1 excol3">
                         <div class="src4_model">U-Net</div>
                         <img class="spec"
@@ -1002,12 +1285,22 @@ Unknown Language Mixed Gender:
                         </div>
                     </div>
                     <div class="col-xs-1 excol3">
-                        <div class="src4_model">Groundtruth</div>
+                        <div class="src4_model">Target Voice</div>
                         <img class="spec"
                              src="../estimated_demo/omr/000it_000029_el05/gt.png">
                         <div class="col-xs-1 excol3">
                             <audio class="src4audio"
                                    src="../estimated_demo/omr/000it_000029_el05/gt.mp3"
+                                   controls=""></audio>
+                        </div>
+                    </div>
+                    <div class="col-xs-1 excol3">
+                        <div class="src4_model">Other Voice</div>
+                        <img class="spec"
+                             src="../estimated_demo/omr/000it_000029_el05/other.png">
+                        <div class="col-xs-1 excol3">
+                            <audio class="src4audio"
+                                   src="../estimated_demo/omr/000it_000029_el05/other.mp3"
                                    controls=""></audio>
                         </div>
                     </div>
@@ -1027,15 +1320,8 @@ Unknown Language Mixed Gender:
         <div style="display: flex">
             <div class="column" style="padding-left:0.9em;display: flex">
                 <div style="padding-top: 0.5em;display: flex">
-                    <div class="col-xs-1 excol3">
-                        <div class="src4_model">Mixture</div>
-                        <img class="spec"
-                             src="../estimated_demo/omr/000it_000029_el05/mix.png">
-                        <div class="col-xs-1 excol3">
-                            <audio class="src4audio"
-                                   src="../estimated_demo/omr/000it_000029_el05/mix.mp3"
-                                   controls=""></audio>
-                        </div>
+                    <div class="estimlabel">
+                        Target Voice Estimates
                     </div>
                     <div class="col-xs-1 excol3">
                         <div class="src4_model">U-Net</div>
@@ -1087,6 +1373,96 @@ Unknown Language Mixed Gender:
 <p></p>
 </br></br>
 
+
+<h2>Failure Cases</h2>
+<p class="lead mb-0" align="justify">
+    Here, we show a failure case where our models particularly fail.
+    Our method relies on lip motion to separate target singing voice.
+    There are many music videos where a group of singers sing perfectly in unison
+    or harmonize maintaining the same lip movements. In such settings, our methods fail.
+    We leave it to future work how to address target voice separation in such settings.
+</p>
+</br>
+<div class="row" style="padding-bottom: 1em">
+    <div class="column" style="padding-left: 1em; padding-right: 1em">
+        <h4>Male-Female Acappella Duet</h4>
+    </div>
+    <div class="column" style="padding-left: 1em">
+        <div class="videoplay" videoid="#mfad">
+            <button type="button" class="btn btn-outline-primary">Play</button>
+        </div>
+    </div>
+    <div class="column">
+        <div class="col-sm-3 videostop" videoid="#mfad">
+            <button type="button" class="btn btn-outline-primary">Stop</button>
+        </div>
+    </div>
+</div>
+<iframe id="mfad" class="mfad_video"
+        width="100%" height="345"
+        src="https://www.youtube.com/embed/SNgnylGkerE?start=15&end=19&showinfo=0&controls=0&enablejsapi=1&disablekb=1"
+        title="Safe and Sound" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+</br>
+<div class="row">
+    <div class="border">
+        <div style="display: flex">
+            <div class="column" style="padding-left:0.9em;display: flex">
+                <div style="padding-top: 0.5em;display: flex">
+                    <div class="col-xs-1 excol3">
+                        <div class="src4_model">Mixture</div>
+                        <img class="spec"
+                             src="../estimated_demo/SNgnylGkerE_0_15_to_0_2/mix.png">
+                        <div class="col-xs-1 excol3">
+                            <audio class="src4audio"
+                                   src="../estimated_demo/SNgnylGkerE_0_15_to_0_2/mix.mp3"
+                                   controls=""></audio>
+                        </div>
+                    </div>
+                    <div class="col-xs-1 excol3">
+                        <div class="src4_model">U-Net</div>
+                        <img class="spec"
+                             src="../estimated_demo/SNgnylGkerE_0_15_to_0_2/ao_male.png">
+                        <div class="col-xs-1 excol3">
+                            <audio class="src4audio"
+                                   src="../estimated_demo/SNgnylGkerE_0_15_to_0_2/ao_male.mp3"
+                                   controls=""></audio>
+                        </div>
+                    </div>
+                    <div class="col-xs-1 excol3">
+                        <div style="padding-left: 35px">LLCP</div>
+                        <img class="spec"
+                             src="../estimated_demo/SNgnylGkerE_0_15_to_0_2/llcp_male.png">
+                        <div class="col-xs-1 excol3">
+                            <audio class="src4audio"
+                                   src="../estimated_demo/SNgnylGkerE_0_15_to_0_2/llcp_male.mp3"
+                                   controls=""></audio>
+                        </div>
+                    </div>
+                    <div class="col-xs-1 excol3">
+                        <div style="padding-left: 65px">Y-Net-r</div>
+                        <img class="spec"
+                             src="../estimated_demo/SNgnylGkerE_0_15_to_0_2/ynetr_male.png">
+                        <div class="col-xs-1 excol3">
+                            <audio class="src4audio"
+                                   src="../estimated_demo/SNgnylGkerE_0_15_to_0_2/ynetr_male.mp3"
+                                   controls=""></audio>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<p class="lead mb-0" align="justify">
+    In this example, we are trying to separate the male voice.
+    None of our models are able to estimate the male voice correctly in this case.
+    As one can see in the video,
+    the male and female voices are both perfectly synced in terms of lip movements.
+</p>
+<p></p>
+</br></br>
 
 
 <div class="row">
