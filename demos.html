@@ -621,8 +621,11 @@ PRESS CTRL+SHIFT+R TO VIEW THE UPDATED PAGE.
     of target voice separation models on such videos. To be able to evaluate quantitatively,
     we recorded a multi-voice montage with an amateur singer so that we can use the
     individual voices as ground truth during evaluation. It is a montage with six voices and an
-    accompaniment track. The song being performed is "The Circle of Life", a popular soundtrack
-    from the movie "The Lion King". Apart from English, the song lyrics also contains Swahili:
+    accompaniment track.
+    It is a very challenging example because the same singer is shown singing multiple voices at the
+    same time.
+    The song being performed is "The Circle of Life", a popular soundtrack
+    from the movie "The Lion King". Apart from English, the song lyrics also contains Zulu:
     a language that was not a part of the training set.
     Also, this singer was not a part of the training set.
     Below are the estimates for the voices: <b>Rafiki (bottom-center)</b>,
@@ -700,7 +703,19 @@ PRESS CTRL+SHIFT+R TO VIEW THE UPDATED PAGE.
                 </div>
             </div>
         </div>
+    </div>
+    <div class="col">
         </br></br>
+        <p class="lead mb-0" align="justify">
+            Below are the estimates for the target voice <b>Rafiki</b> (sung by the <b>bottom-center</b> face).
+            After 6s (see the ground truth spectrogram),
+            this voice is reduced to silence. From the spectrograms, it is clearly evident that
+            our Y-Net captures the silence in this region better than the other models. Y-Net-r
+            seems to be the best performing model here.
+        </p>
+        </br></br>
+    </div>
+    <div class="border">
         <div class="col">
             <h5>Target Voice: Rafiki (Bottom-center Face)</h5>
         </div>
@@ -760,7 +775,27 @@ PRESS CTRL+SHIFT+R TO VIEW THE UPDATED PAGE.
                 </div>
             </div>
         </div>
+    </div>
+    <div class="col">
         </br></br>
+        <p class="lead mb-0" align="justify">
+            Below are the estimates for the target voice <b>Leones</b> (sung by the <b>bottom-left</b> face).
+            The <b>Rafiki</b> voice leaks the most in the U-Net estimate and the LLCP estimate.
+            Y-Net suppresses <b>Rafiki</b> voice better. However, there are leakages from other voices
+            in the estimate of all the models. Note that the leakages in Y-Net estimates mainly constitute
+            the other voices (not separately shown here for brevity)
+            which are singing the Zulu phrase "<i>Ingonyama nengw’ enamabala</i>" with slight delay than
+            compared to the ground truth <b>Leones</b> voice, producing effectively
+            the same lip motion sequence. This is understandable because Y-Net relies on the lip motion to
+            estimate a voice and it can not perform well when there are similar background voices produced
+            by similar lip motion sequence as in this example.
+            Around 8s, there is more leakage of <b>Backing Vocals</b> (sung by <b>top-left</b> face) in
+            the Y-Net-r estimate than in Y-Net-m estimate.
+            Y-Net-m seems to be the best performing model here.
+        </p>
+        </br></br>
+    </div>
+    <div class="border">
         <div class="col">
             <h5>Target Voice: Leones (Bottom-left Face)</h5>
         </div>
@@ -820,7 +855,20 @@ PRESS CTRL+SHIFT+R TO VIEW THE UPDATED PAGE.
                 </div>
             </div>
         </div>
+    </div>
+    <div class="col">
         </br></br>
+        <p class="lead mb-0" align="justify">
+            Below are the estimates for the target voice <b>Backing Vocals</b> (sung by the <b>top-left</b> face).
+            Again, there are lot of leakages of other voices in all the estimates.
+            But note that the target voice is silent for the first 4s. Y-Net captures this silence
+            better than the U-Net and LLCP models (see the spectrograms). The accompaniment track is leaking more in the Y-Net-m estimate
+            around the region between 2s and 4s than in Y-Net-r. Y-Net-r seems to be slightly better
+            than Y-Net-m in this case.
+        </p>
+        </br></br>
+    </div>
+    <div class="border">
         <div class="col">
             <h5>Target Voice: Backing Vocals (Top-left Face)</h5>
         </div>
