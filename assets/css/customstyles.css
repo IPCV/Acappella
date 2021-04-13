@@ -59,6 +59,11 @@
     padding-right: 2%;
 }
 
+.asterix{
+    font-size: 20px;
+    top: -0.2em;
+}
+
 header.masthead {
   position: relative;
   /*background-color: gainsboro!important;*/
