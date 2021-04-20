@@ -16,10 +16,7 @@ author: IPCV
 navbar-links:
   GitHub: "https://github.com/JuanFMontesinos/Acappella"
   Demos: "demos"
-  Models:
-    - Y-Net: "architecture"
-    - LLCP: "llcp"
-    - U-Net: "unet"
+  Y-Net: "architecture"
   The Dataset:
     - Acappella: "dataset"
     - Montage: "dataset"
