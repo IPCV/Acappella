@@ -14,7 +14,6 @@ author: IPCV
 # --- List of links in the navigation bar --- #
 
 navbar-links:
-  GitHub: "https://github.com/JuanFMontesinos/Acappella"
   Demos: "demos"
   Y-Net: "architecture"
   The Dataset:
