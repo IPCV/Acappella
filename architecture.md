@@ -12,6 +12,9 @@ U-Net is an encoder-decoder architecture with skip-connections in between. The o
 
 The video network consist of a set three  convolutional blocks. The first one is a 3D convolutional block which models spatio-temporal information (motion) meanwhile the latter blocks are 2D convolutional blocks which just makes use of the spatial information. 
 
+The Y-Net takes as input a complex spectrogram and the video of  the target singer and  returns a complex mask. The complex product between the mask and and the mixture spectrogram allows to recover the singing voice corresponding to the singer chosen.  
+Since it's a convolutional neural network, the duration of the track is limited by the gpu-memory. 
+
 Detailed layers are shown below. 
 ```
 VnNet(
