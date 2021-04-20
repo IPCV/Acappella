@@ -1,9 +1,12 @@
-<nav class="navbar navbar-expand-xl navbar-light fixed-top navbar-custom {% if page.nav-short %}top-nav-short-permanent{% else %}top-nav-regular{% endif %}">
+<nav style="padding-bottom: 0"
+        class="navbar navbar-expand-xl navbar-light fixed-top navbar-custom {% if page.nav-short %}top-nav-short-permanent{% else %}top-nav-regular{% endif %}">
 
   {%- if site.title-img -%}
-    <a class="navbar-brand navbar-brand-logo" href="{{ '' | absolute_url }}"><img alt="{{ site.title }} Logo" src="{{ site.title-img | relative_url}}"/></a>
+    <a class="navbar-brand navbar-brand-logo"
+       href="{{ '' | absolute_url }}"><img alt="{{ site.title }} Logo" src="{{ site.title-img | relative_url}}"/></a>
   {%- elsif site.title -%}
-    <a class="navbar-brand" href="{{ '' | absolute_url }}">{{ site.title }}</a>
+    <a class="navbar-brand" style="font-weight: 800; color: #404040"
+       href="{{ '' | absolute_url }}"> Home </a>
   {%- endif -%}
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -20,7 +23,11 @@
               {%- for childlink in link[1] -%}
                 {%- for linkparts in childlink %}
                   {%- if linkparts[0] contains 'Juan' or linkparts[0] contains 'Venkatesh' or linkparts[0] contains 'Gloria'  %}
-                    <a class="dropdown-item" style="float: right; width: 150%"
+                    <a class="dropdown-item" style="float: right; width: 120%"
+                       target="_blank"
+                       href="{{ linkparts[1] | relative_url }}">{{ linkparts[0] }}</a>
+                  {% elsif linkparts[0] contains 'Net' or linkparts[0] contains 'LLCP' or linkparts[0] contains 'weights' %}
+                    <a class="dropdown-item" style="float: right; "
                        href="{{ linkparts[1] | relative_url }}">{{ linkparts[0] }}</a>
                   {% else %}
                     <a class="dropdown-item" href="{{ linkparts[1] | relative_url }}">{{ linkparts[0] }}</a>

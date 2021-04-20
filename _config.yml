@@ -6,7 +6,7 @@
 # --- Required options --- #
 
 # Name of website
-title: A cappella
+title: Acappella
 
 # Your name to show in the footer
 author: IPCV
@@ -16,12 +16,13 @@ author: IPCV
 navbar-links:
   GitHub: "https://github.com/JuanFMontesinos/Acappella"
   Demos: "demos"
-  Y-Net Architecture:
-    - The model: "architecture"
-    - Pytorch weights: "weights"
+  Models:
+    - Y-Net: "architecture"
+    - LLCP: "llcp"
+    - U-Net: "unet"
   The Dataset:
-    - Intro: "dataset"
-    - Download: "datasetpython"
+    - Acappella: "dataset"
+    - Montage: "dataset"
   About us: 
     - Juan F. Montesinos: "https://juanmontesinos.com"
     - Venkatesh S. Kadandale: "https://www.upf.edu/web/ipcv/entry/-/-/153364/adscripcion/venkatesh-shenoy-kadandale"
