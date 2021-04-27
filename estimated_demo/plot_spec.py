@@ -14,7 +14,7 @@ TARGET_SAMPLING_RATE = 16384
 wav_files = Path('.').rglob('*.wav')
 for file in wav_files:
     file_path = file.as_posix()
-    if ('tcol' in file_path) and ('gt' in file_path):
+    if ('llcp_910' in file_path):
         file_name = os.path.basename(file_path)
         folder_path = os.path.dirname(file_path)
         output_path = os.path.join(folder_path, file_name[:-4] + '.png')
