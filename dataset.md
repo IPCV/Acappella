@@ -12,3 +12,22 @@ To do so, we have chosen [The circle of life](https://en.wikipedia.org/wiki/Circ
 * Synchronized voices and chorals which are slightly delayed on time.  
 
 We also add an instrumental backtrack in order to provide musical coherence and sonority.  
+```
+Song: The circle of life    
+Compositor: Elton John  
+Owner: Walt Disney Studio 
+Duration: 4:34  
+Voices (top left to bottom right):Backtrack, , , , Rafiki, .
+```
+<iframe width="1234" height="823" src="https://www.youtube.com/embed/XvBOH8FGias" title="The circle of lifre" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+The original recordings can be found in [GDrive](https://drive.google.com/file/d/1M1IRC-OJx75F4BKuPIzuYFX13exXEvZr/view?usp=sharing)  
+Ready-to-use files can be found in [GDrive]()  
+```
+Framerate: 25 FPS  
+Video format: npy (numpy arrays)
+Colorspace: RGB  
+Array shape: 6850x128x96x3 (TxHxWxC)
+Samplerate: 16384 Hz  
+audio format: wav pcm_s16le mono
+```
