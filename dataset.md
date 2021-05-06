@@ -17,7 +17,7 @@ Song: The circle of life
 Compositor: Elton John  
 Owner: Walt Disney Studio 
 Duration: 4:34  
-Voices (top left to bottom right):Backtrack, , , , Rafiki, .
+Voices (top left to bottom right):Backtrack, antelope 2 , lioness, lion, Rafiki, antelope 1.
 ```
 <iframe width="1234" height="823" src="https://www.youtube.com/embed/XvBOH8FGias" title="The circle of lifre" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
