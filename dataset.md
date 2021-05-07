@@ -32,6 +32,17 @@ Voices (top left, clockwise): Backtrack, Antelope 2, Lioness, Lion, Rafiki, Ante
 
 <div markdown="1">
 The original recordings can be found in [GDrive](https://drive.google.com/file/d/1M1IRC-OJx75F4BKuPIzuYFX13exXEvZr/view?usp=sharing)  
+```
+Encoder: h264
+Pixel format: yuv 420p
+Framerate: 30 FPS
+Montage shape: 2000x3000
+
+Audio encoder: wav pcm_s32be 
+Samplerate: 44.1 KHz
+2 Channels
+```
+  
 Ready-to-use files can be found in [GDrive](https://drive.google.com/drive/folders/1SWU_XuJX8EOWM7zXXQSPp_BGmwafPDV7?usp=sharing)  
 
 ```
