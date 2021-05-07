@@ -22,12 +22,24 @@ Voices (top left to bottom right):Backtrack, antelope 2 , lioness, lion, Rafiki,
 <iframe width="926" height="618" src="https://www.youtube.com/embed/XvBOH8FGias" title="The circle of lifre" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 The original recordings can be found in [GDrive](https://drive.google.com/file/d/1M1IRC-OJx75F4BKuPIzuYFX13exXEvZr/view?usp=sharing)  
+```
+Encoder: h264
+Pixel format: yuv 420p
+Framerate: 30 FPS
+Montage shape: 2000x3000
+
+Audio encoder: wav pcm_s32be 
+Samplerate: 44.1 KHz
+2 Channels
+```
+  
 Ready-to-use files can be found in [GDrive](https://drive.google.com/drive/folders/1SWU_XuJX8EOWM7zXXQSPp_BGmwafPDV7?usp=sharing)  
 ```
 Framerate: 25 FPS  
 Video format: npy (numpy arrays)
 Colorspace: RGB  
-Array shape: 6850x128x96x3 (TxHxWxC)
+Array shape: 6850x128x96x3 (TxHxWxC)  
+
 Samplerate: 16384 Hz  
 audio format: wav pcm_s16le mono
 ```
