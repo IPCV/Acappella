@@ -1,0 +1,161 @@
+---
+layout: page
+title: Acappella
+subtitle: A dataset for audio-visual singing voice separation
+---
+<p class="lead mb-0" align="justify">
+    <i>Acappella</i> comprises of around <b>46 hours </b>
+    of <i>a cappella</i> solo singing videos sourced from YouTube,
+    sampled across different singers and languages.
+    These YouTube videos were all publicly available at the time of the dataset creation.
+    The idea behind <i>Acappella</i> is to provide a large-scale dataset
+    to train audio-visual models for singing voice separation.
+    Each video recording has been manually selected to exclude parts
+    of the videos that do not satisfy any of the following characteristics:
+    single frontal face view without occlusions, minimal background
+    noise, no beatboxing, no snapping fingers, songs with lyrics
+    (e.g. we avoid humming and yodelling).
+    The dataset comprises of <b>1493</b> different video samples in total spanning four language categories:
+    English, Spanish, Hindi and Others.
+    <br></br>
+    As a part of the dataset, we also provide the splits for the training
+    set, validation set and test set. The <b>training set</b> makes up around
+    <b>80%</b> of the total dataset. Around <b>7%</b> of the dataset forms the
+    <b>validation set</b> which is used during the training to save the best
+    checkpoint. The <b>test set</b> is divided into the following subsets:
+    <b>seen</b> and <b>unseen</b>. The <b>seen test</b> subset consists of samples from known
+    singers, i.e. singers seen in the training set.
+    The <b>unseen test</b> subset contains singers who are not a part of the training set.
+    The unseen test subset also contains samples from languages not seen
+    in the training set. It presents an approximately
+    uniform distribution of samples across language categories and
+    gender. The dataset statistics are shown in the figures below.
+</p>
+
+<div class="row">
+    <div class="col-sm-6">
+        <img src="../img/violinplot.png">
+    </div>
+    <div class="col-sm-6">
+        <img src="../img/barplot.png">
+    </div>
+</div>
+
+</br>
+<h1>How to use?</h1>
+<p class="lead mb-0" align="justify">
+    To use the dataset, we recommend the users to install the pip package
+    (package name to be disclosed upon paper acceptance) that contains
+    all the necessary info related to the dataset. Alternatively,
+    we also provide the files below for the convenience of viewing.
+    <br></br>
+</p>
+    <div class="row">
+        <div class="col-sm-2 text-center">
+            <a style="color: #242124;"
+               href="../dataset/full_dataset.csv">
+                <i class="fas fa-file-csv fa-4x"></i>
+            </a>
+            <h6>full_dataset.csv</h6>
+        </div>
+        <div class="col-sm-2 text-center">
+            <a style="color: #242124;"
+               href="../dataset/splits.json">
+                <i class="far fa-file fa-4x"></i>
+            </a>
+            <h6>splits.json</h6>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-sm-2 text-center">
+            <a style="color: #242124;"
+               href="../dataset/train.csv">
+                <i class="fas fa-file-csv fa-4x"></i>
+            </a>
+            <h6>train.csv</h6>
+        </div>
+        <div class="col-sm-2 text-center">
+            <a style="color: #242124;"
+               href="../dataset/val_seen.csv">
+                <i class="fas fa-file-csv fa-4x"></i>
+            </a>
+            <h6>val_seen.csv</h6>
+        </div>
+        <div class="col-sm-2 text-center">
+            <a style="color: #242124;"
+               href="../dataset/test_seen.csv">
+                <i class="fas fa-file-csv fa-4x"></i>
+            </a>
+            <h6>test_seen.csv</h6>
+        </div>
+        <div class="col-sm-2 text-center">
+            <a style="color: #242124;"
+               href="../dataset/test_unseen.csv">
+                <i class="fas fa-file-csv fa-4x"></i>
+            </a>
+            <h6>test_unseen.csv</h6>
+        </div>
+    </div>
+    <br>
+    <h6 class="mx-auto" style="color: saddlebrown"><u>Note</u>: Currently, the files are empty. The original files will be made available upon paper acceptance.</h6>
+    <br>
+<p class="lead mb-0" align="justify">
+    The IDs of all the YouTube videos that belong to
+    the <i>Acappella</i> dataset are made available.
+    Each row in the above csv files corresponds to a sample in the dataset.
+    As one can see in the splits.json file, a sample is identified in the
+    format: <i>ID_start_timestamp_to_end_timestamp</i>. Each sample is a trimmed segment of
+    a full-length video obtained by
+    trimming that full-length video along the start timestamp and end timestamp.
+    This way we exclude parts of the
+    full-length videos that
+    are not particularly useful to our task for our experiment setup
+    (<i>e.g.</i> concealed lips, background noise).
+    The start and end timestamps are provided for each of the video IDs (see the csv files).
+    We also provide information regarding the language of the song,
+    the gender of the singer and the duration of each sample.
+    The pip package provides <i>get</i> methods to access all this information.
+</p>
+
+</br>
+<h1>Traces</h1>
+<p class="lead mb-0" align="justify">
+    For this specific paper, we considered certain 4 second segments from
+    the samples for validation and evaluation on the test sets rather than evaluating on the
+    full-length samples (note that a sample is a trimmed excerpt obtained from a full-length video).
+    The 4 second segments were obtained randomly, but frozen across different models for the sake of comparison
+    of their performances. Hence, here we provide the traces corresponding to these 4 second
+    segments that we used for validation and evaluation on the test sets.
+</p>
+<br>
+<div class="row">
+        <div class="col-sm-2 text-center">
+            <a style="color: #242124;"
+               href="../dataset/val_seen_traces.json">
+                <i class="far fa-file fa-4x"></i>
+            </a>
+            <h6>val_seen_traces.json</h6>
+        </div>
+        <div class="col-sm-2 text-center">
+            <a style="color: #242124;"
+               href="../dataset/test_seen_traces.json">
+                <i class="far fa-file fa-4x"></i>
+            </a>
+            <h6>test_seen_traces.json</h6>
+        </div>
+        <div class="col-sm-4 text-center">
+            <a style="color: #242124;"
+               href="../dataset/test_unseen_english_mixed_traces.json">
+                <i class="far fa-file fa-4x"></i>
+            </a>
+            <h6>test_unseen_english_mixed_traces.json</h6>
+        </div>
+        <div class="col-sm-3 text-center">
+            <a style="color: #242124;"
+               href="../dataset/test_unseen_others_mixed_traces.json">
+                <i class="far fa-file fa-4x"></i>
+            </a>
+            <h6>test_unseen_others_mixed_traces.json</h6>
+        </div>
+</div>
