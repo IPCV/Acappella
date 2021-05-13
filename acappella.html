@@ -126,7 +126,8 @@ subtitle: A dataset for audio-visual singing voice separation
     full-length samples (note that a sample is a trimmed excerpt obtained from a full-length video).
     The 4 second segments were obtained randomly, but frozen across different models for the sake of comparison
     of their performances. Hence, here we provide the traces corresponding to these 4 second
-    segments that we used for validation and evaluation on the test sets.
+    segments that we used for validation and evaluation on the test sets. In each of these traces,
+    the entries corresponding to the <i>Acappella</i> dataset are listed under the key "acappella_visual".
 </p>
 <br>
 <div class="row">
@@ -157,5 +158,47 @@ subtitle: A dataset for audio-visual singing voice separation
                 <i class="far fa-file fa-4x"></i>
             </a>
             <h6>test_unseen_others_mixed_traces.json</h6>
+        </div>
+</div>
+<br>
+<p class="lead mb-0" align="justify">
+    <b style="color: brown"><u>NOTE</u>:</b> It is likely that some videos from
+    the dataset might not be available in future if the users takes them down
+    from YouTube or if the users make their videos private or if country-specific
+    restrictions are applied on the videos. In such cases, the traces need to be
+    handled differently during evaluation than the way it is done
+    in our source code. Below, we provide the mappings between the sampleIDs and the
+    indices in the traces which can be very helpful in such cases.
+
+</p>
+<br>
+<div class="row">
+        <div class="col-sm-2 text-center">
+            <a style="color: #242124;"
+               href="../dataset/val_seen_mappings.json">
+                <i class="far fa-file fa-4x"></i>
+            </a>
+            <h6>val_mappings.json</h6>
+        </div>
+        <div class="col-sm-2 text-center">
+            <a style="color: #242124;"
+               href="../dataset/test_seen_mappings.json">
+                <i class="far fa-file fa-4x"></i>
+            </a>
+            <h6>test_seen_mappings.json</h6>
+        </div>
+        <div class="col-sm-4 text-center">
+            <a style="color: #242124;"
+               href="../dataset/test_unseen_english_mixed_mappings.json">
+                <i class="far fa-file fa-4x"></i>
+            </a>
+            <h6>english_mixed_mappings.json</h6>
+        </div>
+        <div class="col-sm-3 text-center">
+            <a style="color: #242124;"
+               href="../dataset/test_unseen_others_mixed_mappings.json">
+                <i class="far fa-file fa-4x"></i>
+            </a>
+            <h6>others_mixed_mappings.json</h6>
         </div>
 </div>
