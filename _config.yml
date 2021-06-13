@@ -20,8 +20,8 @@ navbar-links:
     - Acappella: "acappella"
     - Montage: "dataset"
   About us:
-    - Venkatesh S. Kadandale: "https://vskadandale.github.io"
     - Juan F. Montesinos: "https://juanmontesinos.com"
+    - Venkatesh S. Kadandale: "https://vskadandale.github.io"
     - Gloria Haro: "https://www.upf.edu/web/gloria-haro"
 
 # --- Logo --- #
