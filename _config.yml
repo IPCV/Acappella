@@ -14,16 +14,16 @@ author: IPCV
 # --- List of links in the navigation bar --- #
 
 navbar-links:
-  Demos : "demos"
+  Demos: "demos"
   Y-Net: "architecture"
   The Dataset:
     - Acappella: "acappella"
     - Montage: "dataset"
-  About us: 
-    #- Juan F. Montesinos: "https://juanmontesinos.com"
-    #- Venkatesh S. Kadandale: "https://vskadandale.github.io"
-    #- Gloria Haro: "https://www.upf.edu/web/gloria-haro"
-  
+  About us:
+    - Venkatesh S. Kadandale: "https://vskadandale.github.io"
+    - Juan F. Montesinos: "https://juanmontesinos.com"
+    - Gloria Haro: "https://www.upf.edu/web/gloria-haro"
+
 # --- Logo --- #
 
 # Image to show in the navigation bar - works best with a square image
@@ -43,9 +43,9 @@ round-avatar: true
 # Select the social network links that you want to show in the footer.
 # Uncomment the links you want to show and add your information to each one.
 social-network-links:
-  ##email: "jfmontgar@gmail.com"
+##email: "jfmontgar@gmail.com"
 #  facebook: deanattali
-  ##github: JuanFMontesinos/Acappella
+##github: JuanFMontesinos/Acappella
 #  twitter: daattali
 #  patreon: DeanAttali
 #  youtube: c/daattali
@@ -207,16 +207,14 @@ kramdown:
 
 # Default YAML values (more information on Jekyll's site)
 defaults:
-  -
-    scope:
+  - scope:
       path: ""
       type: "posts"
     values:
       layout: "post"
       comments: true  # add comments to all blog posts
       social-share: true # add social media sharing buttons to all blog posts
-  -
-    scope:
+  - scope:
       path: "" # any file that's not a post will be a "page" layout by default
     values:
       layout: "page"
