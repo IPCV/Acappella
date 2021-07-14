@@ -16,17 +16,17 @@ subtitle: A dataset for audio-visual singing voice separation
     noise, no beatboxing, no snapping fingers, songs with lyrics
     (e.g. we avoid humming and yodelling).
     The dataset comprises of <b>1493</b> different video samples in total spanning four language categories:
-    English, Spanish, Hindi and Others.
+    <b>English</b>, <b>Spanish</b>, <b>Hindi</b> and <b>Others</b>.
     <br></br>
     As a part of the dataset, we also provide the splits for the training
     set, validation set and test set. The <b>training set</b> makes up around
     <b>80%</b> of the total dataset. Around <b>7%</b> of the dataset forms the
     <b>validation set</b> which is used during the training to save the best
     checkpoint. The <b>test set</b> is divided into the following subsets:
-    <b>seen</b> and <b>unseen</b>. The <b>seen test</b> subset consists of samples from known
+    <b>seen-heard</b> and <b>unseen-unheard</b>. The <b>seen-heard test</b> subset consists of samples from known
     singers, i.e. singers seen in the training set.
-    The <b>unseen test</b> subset contains singers who are not a part of the training set.
-    The unseen test subset also contains samples from languages not seen
+    The <b>unseen-unheard test</b> subset contains singers who are not a part of the training set.
+    The unseen-unheard test subset also contains samples from languages not seen
     in the training set. It presents an approximately
     uniform distribution of samples across language categories and
     gender. The dataset statistics are shown in the figures below.
@@ -42,10 +42,24 @@ subtitle: A dataset for audio-visual singing voice separation
 </div>
 
 </br>
+<p class="lead mb-0" align="justify">
+    Note that the <i>Acappella</i> dataset is unbalanced in terms of the duration as it contains more
+female samples than the male ones. This unbalance is present in the training set, validation
+set and the seen-heard test subset. However, the unseen-unheard test subset is balanced with
+respect to the gender as well as the language categories. The languages included in the ‘others’
+language category in the training set are: Italian, Portuguese, Indonesian, Kannada, Arabic,
+and Turkish. The samples from ‘others’ language category belonging to the unseen-unheard
+test subset are totally new in the sense that these languages were not included in the training
+set, those are: Greek, Persian, Assamese, Tamil, Malayalam, Ukrainian, and Croatian.
+
+    <br></br>
+</p>
+
+</br>
 <h1>How to use?</h1>
 <p class="lead mb-0" align="justify">
     To use the dataset, we recommend the users to install the pip package
-    acappella-info that contains
+    acappella_info that contains
     all the necessary info related to the dataset. Alternatively,
     we also provide the files below for the convenience of viewing.
     <br></br>
@@ -99,8 +113,7 @@ subtitle: A dataset for audio-visual singing voice separation
     </div>
     <!--<br>
     <h6 class="mx-auto" style="color: saddlebrown"><u>Note</u>: Currently, the files are empty. The original files will be made available upon paper acceptance.</h6>
-    -->
-    <br>
+    <br>-->
 <p class="lead mb-0" align="justify">
     The IDs of all the YouTube videos that belong to
     the <i>Acappella</i> dataset are made available.
@@ -125,14 +138,15 @@ subtitle: A dataset for audio-visual singing voice separation
     For this specific paper, we considered certain 4 second segments from
     the samples for validation and evaluation on the test sets rather than evaluating on the
     full-length samples (note that a sample is a trimmed excerpt obtained from a full-length video).
-    The 4 second segments were obtained randomly, but frozen across different models for the sake of comparison
-    of their performances. Hence, here we provide the traces corresponding to these 4 second
+    The 4 second segments were obtained randomly, but frozen across different models for the sake of
+    fair comparison of their performances.
+    <!--Hence, here we provide the traces corresponding to these 4 second
     segments that we used for validation and evaluation on the test sets. In each of these traces,
     the entries corresponding to the <i>Acappella</i> dataset are listed under the key "acappella_visual".
-    segments that we used for validation and evaluation on the test sets.
+    segments that we used for validation and evaluation on the test sets.-->
 </p>
 <br>
-<div class="row">
+<!--<div class="row">
         <div class="col-sm-2 text-center">
             <a style="color: #242124;"
                href="../dataset/val_seen_traces.json">
@@ -163,20 +177,15 @@ subtitle: A dataset for audio-visual singing voice separation
         </div>
 
 </div>
-<br>
+<br>-->
 <p class="lead mb-0" align="justify">
     <b style="color: brown"><u>NOTE</u>:</b> It is likely that some videos from
     the dataset might not be available in future if the users takes them down
     from YouTube or if the users make their videos private or if country-specific
-    restrictions are applied on the videos. In such cases, the traces need to be
-    handled differently during evaluation than the way it is done
-    in our source code. Below, we provide the mappings between the sampleIDs and the
-    indices in the traces which can be very helpful in such cases. Again note that these
-    mappings are provided for the the indices corresponding to the key "acappella_av"
-    in the json file with traces.
-
+    restrictions are applied on the videos.
 </p>
 <br>
+<!--
 <div class="row">
         <div class="col-sm-2 text-center">
             <a style="color: #242124;"
@@ -207,3 +216,27 @@ subtitle: A dataset for audio-visual singing voice separation
             <h6>others_mixed_mapping.json</h6>
         </div>
 </div>
+-->
+
+</br></br>
+<h2>LICENSE</h2>
+<p class="lead mb-0" align="justify">
+    The <i>Acappella</i> dataset is available to download for
+    commercial/research purposes under a
+    <a href="https://creativecommons.org/licenses/by/4.0/">
+        Creative Commons Attribution 4.0 International License</a>.
+    The copyright remains with the original owners of the videos
+    listed in the dataset.
+    Click <a href="../acappella/license.txt">here</a> for the complete version of the license.
+    </br>
+    <strong>Caution:</strong> We note that the distribution of identities in the
+    <i>Acappella</i> datasets may not be representative of the
+    global human population. Please be careful of unintended
+    societal, gender, racial and other biases when training or
+    deploying models trained on this data.
+    </br>
+    <strong>Note:</strong> These license terms have been inspired from
+    that of the <a href="https://www.robots.ox.ac.uk/~vgg/data/voxceleb/">
+        VoxCeleb</a> dataset.
+    <br></br>
+</p>
