@@ -31,7 +31,7 @@ Voices (top left, clockwise): Backtrack, Antelope 2, Lioness, Lion, Rafiki, Ante
 <iframe width="926" height="618" src="https://www.youtube.com/embed/XvBOH8FGias" title="The circle of lifre" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <div markdown="1">
-The original recordings can be found in [GDrive](https://drive.google.com/file/d/1M1IRC-OJx75F4BKuPIzuYFX13exXEvZr/view?usp=sharing)  
+The original recordings can be found in [GDrive](https://drive.google.com/drive/folders/1mYF3ARkSKhV5a09G5MsefD7foFNRqHlt?usp=sharing)  
 ```
 Encoder: h264
 Pixel format: yuv 420p
@@ -43,7 +43,7 @@ Samplerate: 44.1 KHz
 2 Channels
 ```
   
-Ready-to-use files can be found in [GDrive](https://drive.google.com/drive/folders/1mYF3ARkSKhV5a09G5MsefD7foFNRqHlt?usp=sharing)  
+Ready-to-use files can be found in [GDrive](https://drive.google.com/file/d/1An3kalwUpyPWpeH_urJchWsWaffVj3_J/view?usp=sharing)  
 
 ```
 Framerate: 25 FPS  
