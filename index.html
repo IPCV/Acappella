@@ -76,7 +76,7 @@ share-description: Official website of A cappella: Audio-visual Singing Voice Se
             <h5 style="padding-bottom: 5%; padding-top: 5%">Paper</h5>
         </div>
         <div class="col-sm-3 text-center">
-            <a href="./"
+            <a href="https://github.com/IPCV/AV-Acappella"
                style="color: #242124">
                 <i class="fab fa-github fa-8x"></i></a>
             <h5 style="padding-bottom: 5%; padding-top: 5%">Code + Weights</h5>
@@ -96,36 +96,32 @@ share-description: Official website of A cappella: Audio-visual Singing Voice Se
             <h5 style="padding-bottom: 5%; padding-top: 5px">Demos</h5>
         </div>
     </div>
-    <h6 class="mx-auto text-center" style="color: saddlebrown">The code and the pre-trained models will be available soon!</h6>
+    <!--<h6 class="mx-auto text-center" style="color: saddlebrown">The code and the pre-trained models will be available soon!</h6>-->
     </br>
     <!-- Image Showcases -->
     <h2 style="text-align: center">Abstract</h2>
     <p class="lead mb-0" align="justify">
-        Music source separation can be interpreted as the estimation
-        of the constituent music sources that a music clip is composed
-        of. In this work, we explore the single-channel singing voice
-        separation problem from a multimodal perspective, by jointly
-        learning from audio and visual modalities. To do so, we present
-        <a href="./acappella/"><i>Acappella</i></a>, a dataset spanning around 46 hours of <i>a cappella</i>
-        solo singing videos sourced from YouTube. We propose Y-Net,
-        an audio-visual convolutional neural network which achieves
-        state-of-the-art singing voice separation results on the Acappella
-        dataset and compare it against its audio-only counterpart,
-        U-Net, and a state-of-the-art audio-visual speech separation
-        model. Singing voice separation can be particularly challenging
-        when the audio mixture also comprises of other accompaniment
-        voices and background sounds along with the
-        target voice of interest. We demonstrate that our model can
-        outperform the baseline models in the singing voice separation
-        task in such challenging scenarios. The code, the pre-trained
-        models and the dataset will be publicly available at
+        The task of isolating a target singing voice in music videos has useful applications.
+        In this work, we explore the single-channel singing voice separation problem from a
+        multimodal perspective, by jointly learning from audio and visual modalities. To do so,
+        we present <a href="./acappella/"><i>Acappella</i></a>, a dataset spanning around 46
+        hours of <i>a cappella</i> solo singing videos sourced from YouTube. We also propose
+        an audio-visual convolutional network based on graphs which achieves state-of-the-art
+        singing voice separation results on our dataset and compare it against its audio-only
+        counterpart, U-Net, and a state-of-the-art audiovisual speech separation model. We
+        evaluate the models in the following challenging setups: i) presence of overlapping
+        voices in the audio mixtures, ii) the target voice set to lower volume levels in the
+        mix, and iii) combination of i) and ii). The third one being the most challenging
+        evaluation setup. We demonstrate that our model outperforms the baseline models in the
+        singing voice separation task in the most challenging evaluation setup. The code, the
+        pre-trained models, and the dataset are publicly available at
         <a href="https://ipcv.github.io/Acappella/">https://ipcv.github.io/Acappella/</a>
     </p>
     </br>
     <div style="display: flex">
         <div>
             <sup class="asterix" style="top: 0.1em">*</sup></div>
-        <p style="font-size: 1.15rem">&nbsp; Authors contributed equally.</p>
+        <p style="font-size: 1.15rem">&nbsp; These authors contributed equally to this work.</p>
     </div>
 
     <div class="mx-auto">
@@ -143,19 +139,19 @@ share-description: Official website of A cappella: Audio-visual Singing Voice Se
         <br>
         <h5>Acknowledgements</h5>
         <p class="lead mb-0" align="justify">
-        The authors acknowledge support by MICINN/FEDER UE
-        project, ref. PGC2018-098625-B-I00, and H2020-MSCA-
-        RISE-2017 project, ref. 777826 NoMADS. This work has also
-        received funding from the European Union’s Horizon 2020
-        research and innovation programme under the Marie Skłodowska-Curie
-        grant agreement No. 713673.
-        We thank
-        NVIDIA Corporation for the donation of GPUs. J. F. M
-        acknowledges support by FPI scholarship PRE2018-083920. V. S.
-        K. has received financial support through “la Caixa” Foundation
-        (ID 100010434), fellowship code: LCF/BQ/DI18/11660064.
-        We thank Emilia Gómez and Olga Slizovskaia for insightful
-        discussions on the subject.</p>
+            The authors acknowledge support by MICINN/FEDER UE project, ref. PGC2018-098625-B-I00;
+            H2020-MSCA-RISE-2017 project, ref. 777826 NoMADS; ReAViPeRo network, ref. RED2018-102511-T;
+            and Spanish Ministry of Economy and Competitiveness under the María de Maeztu Units of Excellence
+            Program (MDM-2015-0502) and the Social European Funds. J. F. M. acknowledges support by
+            FPI scholarship PRE2018-083920. V. S. K. has received financial support through “la Caixa”
+            Foundation (ID 100010434), fellowship code: LCF/BQ/DI18/11660064. V.S.K has also received
+            funding from the European Union’s Horizon 2020 research and innovation programme under the
+            Marie SkłodowskaCurie grant agreement No. 713673. We gratefully acknowledge NVIDIA Corporation
+            for the donation of GPUs used for the experiments.
+
+            We thank <a href="https://emiliagomez.com/">Emilia Gómez</a> and
+            <a href="http://olgaslizovskaia.ml/">Olga Slizovskaia</a>
+            for insightful discussions on the subject.</p>
     </div>
 
 </div>
